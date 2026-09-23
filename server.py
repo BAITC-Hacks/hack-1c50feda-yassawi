@@ -16,7 +16,7 @@ PORT = 8000
 
 @contextmanager
 def connect_to_database():
-    """SQLite файлын ашады. Файл жоқ болса, SQLite оны өзі жасайды."""
+    """SQLite файлын ашады. Файл жоқ болса,qweqweqweqew SQLite оны өзі жасайды."""
     connection = sqlite3.connect(DATABASE_FILE)
     connection.row_factory = sqlite3.Row
     try:
