@@ -1,0 +1,11 @@
+test_new_target_after_six_negative_observations (tests.test_exploration.Stage1ExperimentalExplorationTests.test_new_target_after_six_negative_observations) ... ok
+test_search_exhaustion_and_timeout (tests.test_exploration.Stage1ExperimentalExplorationTests.test_search_exhaustion_and_timeout) ... ok
+test_six_negative_segments_do_not_end_search (tests.test_exploration.Stage1ExperimentalExplorationTests.test_six_negative_segments_do_not_end_search) ... ok
+test_stop_reasons_and_no_obligatory_full_budget (tests.test_exploration.Stage1ExperimentalExplorationTests.test_stop_reasons_and_no_obligatory_full_budget) ... ok
+test_strong_evidence_stops_with_unexplored_affordable_hypotheses (tests.test_exploration.Stage1ExperimentalExplorationTests.test_strong_evidence_stops_with_unexplored_affordable_hypotheses) ... ok
+test_tariff_names_are_not_special (tests.test_exploration.Stage1ExperimentalExplorationTests.test_tariff_names_are_not_special) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.952s
+
+OK

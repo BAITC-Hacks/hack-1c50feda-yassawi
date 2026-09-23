@@ -1,0 +1,14 @@
+test_adaptive_experiment_count_and_size (tests.test_agent.AgentTests.test_adaptive_experiment_count_and_size) ... ok
+test_empty_missing_invalid (tests.test_agent.AgentTests.test_empty_missing_invalid) ... ok
+test_negative_noisy_and_actual_sample (tests.test_agent.AgentTests.test_negative_noisy_and_actual_sample) ... ok
+test_observations_change_plan (tests.test_agent.AgentTests.test_observations_change_plan) ... ok
+test_official_contract_and_filters (tests.test_agent.AgentTests.test_official_contract_and_filters) ... ok
+test_pilot_error (tests.test_agent.AgentTests.test_pilot_error) ... ok
+test_reproducibility_no_key_and_log_error (tests.test_agent.AgentTests.test_reproducibility_no_key_and_log_error) ... ok
+test_small_budget_contacts (tests.test_agent.AgentTests.test_small_budget_contacts) ... ok
+test_split_large_cells (tests.test_agent.AgentTests.test_split_large_cells) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 3.849s
+
+OK

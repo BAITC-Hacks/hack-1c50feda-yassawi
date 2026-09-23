@@ -1,0 +1,799 @@
+{
+  "local_source_commit": "fc2557c54f416b1a2e01d3d46e20f800c0a243df",
+  "remote_source_commit": "28e5797879663ab18e285a04d90dc4b727ae7666",
+  "merge_conflicts": [],
+  "protected_byte_identical_to_local_source": 70,
+  "all_organizer_files_verified": 15,
+  "archives": {
+    "before_stage1": {
+      "files_verified": 13,
+      "manifest_sha256": "3799d249de1fe14b5552647d4368ec98ce6100b56d66fd2370e6703ac306cf7d"
+    },
+    "stage1_experiment": {
+      "files_verified": 24,
+      "manifest_sha256": "a58e2afaa7255622d1928308e58fb692aa13899e9787f9e6141b9b1b02e9d627"
+    }
+  },
+  "documentation_links": [
+    {
+      "document": "README.md",
+      "target": "agent.py"
+    },
+    {
+      "document": "README.md",
+      "target": "submission.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "SUBMISSION.md"
+    },
+    {
+      "document": "README.md",
+      "target": "PACKAGING.md"
+    },
+    {
+      "document": "README.md",
+      "target": "DEMO.md"
+    },
+    {
+      "document": "README.md",
+      "target": "tests/README.md"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/publication/report.md"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/publication/commands.json"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/publication/local_eval.txt"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/publication/split_validation.json"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/publication/local_eval_10.txt"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/stabilization/main_split_seed42.json"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/publication/report.md"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/publication/demo_tests.txt"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/publication/provenance.json"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/final_verification/demo_scenario.json"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/final_verification/demo_http.json"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/submission_prep/completeness.json"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/data_audit.json"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/stabilization/history_and_integrity.json"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/stage1/report.md"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/stage1/STATUS.md"
+    },
+    {
+      "document": "README.md",
+      "target": "DEMO.md"
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/publication/report.md"
+    },
+    {
+      "document": "README.md",
+      "target": "SUBMISSION.md"
+    },
+    {
+      "document": "README.md",
+      "target": "PACKAGING.md"
+    },
+    {
+      "document": "DEMO.md",
+      "target": "README.md"
+    },
+    {
+      "document": "DEMO.md",
+      "target": "diagnostics/stabilization/main_split_seed42.json"
+    },
+    {
+      "document": "DEMO.md",
+      "target": "submission.csv"
+    },
+    {
+      "document": "DEMO.md",
+      "target": "diagnostics/final_verification/report.md"
+    },
+    {
+      "document": "DEMO.md",
+      "target": "diagnostics/final_verification/demo_scenario.json"
+    },
+    {
+      "document": "DEMO.md",
+      "target": "diagnostics/stabilization/main_split_seed42.json"
+    },
+    {
+      "document": "DEMO.md",
+      "target": "diagnostics/stabilization/report.md"
+    },
+    {
+      "document": "DEMO.md",
+      "target": "experiments/stage1_expanded_search/README.md"
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "diagnostics/publication/report.md"
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "submission.csv"
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "diagnostics/publication/report.md"
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "README.md"
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "DEMO.md"
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "PACKAGING.md"
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "diagnostics/publication/report.md"
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "diagnostics/final_verification/report.md"
+    },
+    {
+      "document": "PACKAGING.md",
+      "target": "SUBMISSION.md"
+    },
+    {
+      "document": "PACKAGING.md",
+      "target": "README.md"
+    },
+    {
+      "document": "PACKAGING.md",
+      "target": "DEMO.md"
+    },
+    {
+      "document": "PACKAGING.md",
+      "target": "diagnostics/submission_prep/git_scan.json"
+    },
+    {
+      "document": "PACKAGING.md",
+      "target": "diagnostics/publication/report.md"
+    },
+    {
+      "document": "PACKAGING.md",
+      "target": "diagnostics/publication/report.md"
+    },
+    {
+      "document": "PACKAGING.md",
+      "target": "diagnostics/publication/commands.json"
+    },
+    {
+      "document": "PACKAGING.md",
+      "target": "diagnostics/publication/provenance.json"
+    },
+    {
+      "document": "PACKAGING.md",
+      "target": "diagnostics/final_verification/report.md"
+    },
+    {
+      "document": "PACKAGING.md",
+      "target": "diagnostics/submission_prep/completeness.json"
+    },
+    {
+      "document": "PACKAGING.md",
+      "target": "diagnostics/publication/report.md"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "comparison.json"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "provenance.json"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "commands.json"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "common_tests.txt"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "demo_tests.txt"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "known_limit_tests.txt"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "stage1_experiment_tests.txt"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "diagnostic_tests.txt"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "pip_check.txt"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "local_eval.txt"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "local_eval_10.txt"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "split_validation.json"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "make_submission_first.txt"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "make_submission_second.txt"
+    },
+    {
+      "document": "diagnostics/publication/report.md",
+      "target": "../../SUBMISSION.md"
+    }
+  ],
+  "final_changes_vs_remote_before_this_audit_file": [
+    {
+      "status": "A",
+      "path": ".gitattributes"
+    },
+    {
+      "status": "M",
+      "path": ".gitignore"
+    },
+    {
+      "status": "A",
+      "path": "DEMO.md"
+    },
+    {
+      "status": "A",
+      "path": "PACKAGING.md"
+    },
+    {
+      "status": "M",
+      "path": "README.md"
+    },
+    {
+      "status": "A",
+      "path": "SUBMISSION.md"
+    },
+    {
+      "status": "M",
+      "path": "demo_app.py"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/cleanup.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/commands.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/common_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/demo_http.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/demo_scenario.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/demo_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/diagnostic_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/index_review.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/integrity_after.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/integrity_before.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/known_limit_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/local_eval.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/local_eval_10.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/make_submission_first.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/make_submission_second.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/package_check.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/pip_check.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/report.md"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/split_validation.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/final_verification/stage1_experiment_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/organizer_readiness/checks.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/organizer_readiness/report.md"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/commands.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/common_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/comparison.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/demo_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/diagnostic_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/known_limit_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/local_eval.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/local_eval_10.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/make_submission_first.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/make_submission_second.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/pip_check.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/provenance.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/report.md"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/split_validation.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/publication/stage1_experiment_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stabilization/audit_output.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stabilization/common_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stabilization/diagnostic_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stabilization/history_and_integrity.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stabilization/local_eval.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stabilization/local_eval_10.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stabilization/main_split_seed42.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stabilization/make_submission_first.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stabilization/make_submission_second.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stabilization/report.md"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stabilization/stage1_experiment_tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stabilization/submission_verification.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/STATUS.md"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/checks.md"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/comparison_additional.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/comparison_primary.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/controlled_regression.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/experiment_plan.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/integrity.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/local_eval.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/local_eval_10.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/make_submission.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/method.md"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/report.md"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/submission_hash.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/stage1/tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/submission_prep/completeness.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/submission_prep/final_check.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/submission_prep/git_scan.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/submission_prep/integrity_after.json"
+    },
+    {
+      "status": "A",
+      "path": "diagnostics/submission_prep/integrity_before.json"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/README.md"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/agent.py"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/data/change_tariff.csv"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/checks.md"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/comparison_additional.json"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/comparison_primary.json"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/controlled_regression.json"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/experiment_plan.json"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/integrity.json"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/local_eval.txt"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/local_eval_10.txt"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/make_submission.txt"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/method.md"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/report.md"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/submission_hash.json"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/render_stage1_report.py"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/split_eval.py"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/submission.csv"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/tests_source/test_agent.py"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/tests_source/test_demo.py"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/tests_source/test_exploration.py"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/tests_source/test_split_eval.py"
+    },
+    {
+      "status": "A",
+      "path": "experiments/stage1_expanded_search/versions.json"
+    },
+    {
+      "status": "A",
+      "path": "render_stage1_report.py"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/README.md"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/agent.py"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/data/change_tariff.csv"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/diagnostics/benchmark.json"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/diagnostics/data_audit.json"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/diagnostics/decisions_seed42.json"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/diagnostics/local_eval.txt"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/diagnostics/local_eval_10.txt"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/diagnostics/submission_sha256.txt"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/diagnostics/tests.txt"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/diagnostics/verification.json"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/organizer_hashes.json"
+    },
+    {
+      "status": "A",
+      "path": "snapshots/before_stage1/submission.csv"
+    },
+    {
+      "status": "A",
+      "path": "split_eval.py"
+    },
+    {
+      "status": "A",
+      "path": "stabilization_audit.py"
+    },
+    {
+      "status": "M",
+      "path": "submission.csv"
+    },
+    {
+      "status": "A",
+      "path": "tests/README.md"
+    },
+    {
+      "status": "M",
+      "path": "tests/test_demo.py"
+    },
+    {
+      "status": "A",
+      "path": "tests/test_exploration.py"
+    },
+    {
+      "status": "A",
+      "path": "tests/test_split_eval.py"
+    }
+  ],
+  "new_deletions": [],
+  "index_secret_pattern_scan": {
+    "text_blobs": 139,
+    "matches": []
+  },
+  "outgoing_history_scan": {
+    "commits": [
+      "94a397222a07068cf5daffa5f143d879fb4cfe4f",
+      "fc2557c54f416b1a2e01d3d46e20f800c0a243df"
+    ],
+    "unique_changed_blobs": 86,
+    "bytes": 4675300,
+    "utf16_blobs": 7,
+    "matches": [],
+    "limitation": "Known credential formats and sensitive paths, not arbitrary-secret detection"
+  },
+  "private_backups_excluded": true,
+  "checks_performed_in_publication_worktree": true
+}

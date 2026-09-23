@@ -1,0 +1,134 @@
+[
+  {
+    "name": "common_tests",
+    "command": [
+      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "tests.test_agent",
+      "-v"
+    ],
+    "cwd": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\diagnostics\\local_runs\\publish_beegrowth",
+    "returncode": 0,
+    "seconds": 4.922740700072609,
+    "tests_run": 9,
+    "unittest_ok": true
+  },
+  {
+    "name": "demo_tests",
+    "command": [
+      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "tests.test_demo",
+      "-v"
+    ],
+    "cwd": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\diagnostics\\local_runs\\publish_beegrowth",
+    "returncode": 0,
+    "seconds": 13.377270000055432,
+    "tests_run": 4,
+    "unittest_ok": true
+  },
+  {
+    "name": "known_limit_tests",
+    "command": [
+      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "tests.test_exploration.MainKnownLimitTests",
+      "-v"
+    ],
+    "cwd": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\diagnostics\\local_runs\\publish_beegrowth",
+    "returncode": 0,
+    "seconds": 1.2041182999964803,
+    "tests_run": 1,
+    "unittest_ok": true
+  },
+  {
+    "name": "stage1_experiment_tests",
+    "command": [
+      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "tests.test_exploration.Stage1ExperimentalExplorationTests",
+      "-v"
+    ],
+    "cwd": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\diagnostics\\local_runs\\publish_beegrowth",
+    "returncode": 0,
+    "seconds": 2.0324909000191838,
+    "tests_run": 6,
+    "unittest_ok": true
+  },
+  {
+    "name": "diagnostic_tests",
+    "command": [
+      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\.venv\\Scripts\\python.exe",
+      "-m",
+      "unittest",
+      "tests.test_split_eval",
+      "-v"
+    ],
+    "cwd": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\diagnostics\\local_runs\\publish_beegrowth",
+    "returncode": 0,
+    "seconds": 3.1116058999905363,
+    "tests_run": 5,
+    "unittest_ok": true
+  },
+  {
+    "name": "local_eval",
+    "command": [
+      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\.venv\\Scripts\\python.exe",
+      "local_eval.py"
+    ],
+    "cwd": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\diagnostics\\local_runs\\publish_beegrowth",
+    "returncode": 0,
+    "seconds": 2.481016800040379
+  },
+  {
+    "name": "local_eval_10",
+    "command": [
+      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\.venv\\Scripts\\python.exe",
+      "local_eval.py",
+      "--runs",
+      "10"
+    ],
+    "cwd": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\diagnostics\\local_runs\\publish_beegrowth",
+    "returncode": 0,
+    "seconds": 15.12025400006678
+  },
+  {
+    "name": "make_submission_first",
+    "command": [
+      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\.venv\\Scripts\\python.exe",
+      "make_submission.py"
+    ],
+    "cwd": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\diagnostics\\local_runs\\publish_beegrowth",
+    "returncode": 0,
+    "seconds": 2.359606600017287,
+    "sha256": "e0531bbc31c53e86a3656dd0a1e7eb66c43cbddedd9312541478305a9446fa8e"
+  },
+  {
+    "name": "make_submission_second",
+    "command": [
+      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\.venv\\Scripts\\python.exe",
+      "make_submission.py"
+    ],
+    "cwd": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\diagnostics\\local_runs\\publish_beegrowth",
+    "returncode": 0,
+    "seconds": 2.1478424000088125,
+    "sha256": "e0531bbc31c53e86a3656dd0a1e7eb66c43cbddedd9312541478305a9446fa8e",
+    "byte_equal": true
+  },
+  {
+    "name": "pip_check",
+    "command": [
+      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "cwd": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\diagnostics\\local_runs\\publish_beegrowth",
+    "returncode": 0,
+    "seconds": 0.9621808999218047
+  }
+]

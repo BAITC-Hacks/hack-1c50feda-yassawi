@@ -1,0 +1,36 @@
+=== Результат команды: local ===
+Статус: PASS
+Baseline ARPU (без кампаний):      150,641,084
+Прирост ARPU (gross):                   22,660
+Затраты на коммуникацию:                 8,918
+ЧИСТЫЙ РЕЗУЛЬТАТ (net):                 13,742   (+0.009% к baseline)
+ARPU после кампаний:               150,654,826
+
+Кампаний: 17  |  контактов: 4,722  |  уникальных абонентов: 3,684 (15.7%)
+Средний чистый прирост на абонента: 3.7
+ROI (gross lift / затраты): 2.54
+Risk score (% абонентов с отрицательным эффектом): 82.8%
+Бюджет: 8,918 из 100,000 у.е. (8.9%)
+
+По кампаниям (gross, до дедупликации между кампаниями):
+  - pilot_1 [push]: контактов=100  cost=0  gross_lift=1,467  negative=0
+  - pilot_2 [push]: контактов=100  cost=0  gross_lift=-229  negative=100
+  - pilot_3 [push]: контактов=100  cost=0  gross_lift=94  negative=0
+  - pilot_4 [push]: контактов=100  cost=0  gross_lift=7,412  negative=0
+  - pilot_5 [push]: контактов=100  cost=0  gross_lift=22,490  negative=0
+  - pilot_6 [push]: контактов=100  cost=0  gross_lift=-5,062  negative=100
+  - pilot_7 [sms]: контактов=100  cost=400  gross_lift=-290  negative=100
+  - pilot_8 [digital_ads]: контактов=100  cost=2,200  gross_lift=-398  negative=100
+  - pilot_9 [push]: контактов=143  cost=0  gross_lift=-343  negative=143
+  - pilot_10 [sms]: контактов=143  cost=572  gross_lift=-446  negative=143
+  - pilot_11 [push]: контактов=100  cost=0  gross_lift=-238  negative=100
+  - pilot_12 [sms]: контактов=100  cost=400  gross_lift=-319  negative=100
+  - pilot_13 [digital_ads]: контактов=143  cost=3,146  gross_lift=-578  negative=143
+  - pilot_14 [digital_ads]: контактов=100  cost=2,200  gross_lift=-401  negative=100
+  - pilot_15 [push]: контактов=143  cost=0  gross_lift=2,030  negative=0
+  - pilot_16 [push]: контактов=100  cost=0  gross_lift=1,420  negative=0
+  - BeeGrowth_01 [push]: контактов=2,950  cost=0  gross_lift=-7,082  negative=2950
+
+Пилотов проведено: 16 из 20
+Осталось бюджета: 91,082 из 100,000
+Осталось охвата:  13,228 из 15,000
