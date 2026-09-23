@@ -3,10 +3,10 @@ import hashlib
 import json
 from pathlib import Path
 import pandas as pd
-from agent import Agent, audience
+from agent import Agent
 from make_submission import build_submission
 from mock_environment import make_mock_env
-from scoring_core import sanitize_campaigns, validate_strategy
+from scoring_core import apply_filters, sanitize_campaigns, validate_strategy
 
 
 def main():
@@ -27,7 +27,7 @@ def main():
     checks = []
     for seed in [*range(10), 42]:
         env, _ = make_mock_env(seed=seed)
-        agent = Agent(log_path=root / "diagnostics/decisions_seed42.json" if seed == 42 else None)
+        agent = Agent()
         plan = agent.act(env)
         assert 1 <= len(plan) <= 10
         assert plan == sanitize_campaigns(plan, env.tariffs)
@@ -35,7 +35,7 @@ def main():
         assert 0 < len(env.pilot_history) <= 20
         seen, cost, contacts = set(), 0, 0
         for campaign in plan:
-            frame = audience(env.customer_profile, campaign)
+            frame = apply_filters(env.customer_profile, pd.Series(campaign))
             assert 0 < len(frame) <= 5000
             assert not (seen & set(frame.ID_NUMBER))
             seen.update(frame.ID_NUMBER)

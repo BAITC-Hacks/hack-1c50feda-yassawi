@@ -1,2 +1,4 @@
 campaign_name,filter_arpu_segment,filter_data_segment,filter_call_segment,filter_current_tariff,target_tariff,channel
-BeeGrowth_01,HIGH,,,tariff_10,tariff_14,push
+QADAM_01_tariff_8_tariff_9,LOW,,,tariff_8,tariff_9,call
+QADAM_02_tariff_12_tariff_8,MID,,,tariff_12,tariff_8,digital_ads
+QADAM_03_tariff_10_tariff_11,MID,,,tariff_10,tariff_11,digital_ads

@@ -1,0 +1,22 @@
+QADAM · Campaign Lab
+
+1. ZIP архивін толық шығарыңыз.
+2. Windows-та start.bat файлын іске қосыңыз.
+3. Терминалда QADAM ready шыққанда браузерде http://127.0.0.1:8765 ашыңыз.
+4. «Агентті іске қосу» батырмасын басыңыз.
+
+Бірінші орнату: Python 3.11+ және тәуелділіктер үшін интернет қажет.
+Visual Studio: Qadam.sln; Python development компоненті қажет.
+Visual Studio Code: жоба қалтасын ашып, .venv interpreter-ін таңдаңыз, F5.
+
+Толық түсіндірме: README.md
+Кейс талдауы: docs/CASE_ANALYSIS.md
+Тексеру дәлелі: docs/VALIDATION.md
+
+Ресми тапсыру файлы:
+python make_submission.py
+
+GitHub-қа .venv, data, кілттерді немесе толық ZIP-ті public түрде жүктемеңіз.
+.gitignore дұрыс бапталған. Кодты Git арқылы private репозиторийге жүктеу жолы README-де.
+
+Mock ортадағы оң нәтиже финалдағы баллға кепілдік емес.

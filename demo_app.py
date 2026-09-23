@@ -1,4 +1,4 @@
-"""Optional Russian demo; the submission agent has no Streamlit dependency."""
+"""Optional Russian QADAM demo; the submission agent has no Streamlit dependency."""
 import contextlib
 import io
 import json
@@ -18,7 +18,7 @@ ROOT = Path(__file__).parent
 class DemoAgent(Agent):
     def act(self, env):
         plan = super().act(env)
-        self.snapshot = {"campaigns": plan, "pilots": list(env.pilot_history), "log": self.log,
+        self.snapshot = {**self.report,
                          "budget_after_pilots": env.remaining_budget,
                          "contacts_after_pilots": env.remaining_contacts}
         return plan
@@ -34,8 +34,8 @@ def run_demo(seed):
     return {**agent.snapshot, "evaluation": result, "seed": int(seed)}
 
 
-st.set_page_config(page_title="BeeGrowth Agent", page_icon="🐝", layout="wide")
-st.title("🐝 BeeGrowth Agent")
+st.set_page_config(page_title="QADAM", page_icon="👣", layout="wide")
+st.title("👣 QADAM")
 st.warning("Все данные синтетические. Локальная мок-оценка не гарантирует результат скрытого судейства.")
 profile = pd.read_csv(ROOT / "customer_profile.csv")
 left, right = st.columns(2)
@@ -57,15 +57,14 @@ if "report" in st.session_state:
     forecasts, observations, evaluation, explanation = st.tabs([
         "Прогноз агента", "Наблюдения пилотов", "Локальный оценщик", "Объяснения"])
     with forecasts:
-        st.dataframe(pd.DataFrame(report["campaigns"]), hide_index=True)
-        selected = [e for e in report["log"] if e["event"] == "selected"]
-        st.dataframe(pd.DataFrame([{ "Кампания": e["campaign"]["campaign_name"],
-                                    "Аудитория": e["size"], "Средний прогноз net": e["mean_net"],
-                                    "Прогноз с поправкой на риск": e["risk_adjusted_net"]} for e in selected]), hide_index=True)
+        st.dataframe(pd.DataFrame(report["plan"]), hide_index=True)
+        st.dataframe(pd.DataFrame([{ "Кампания": e["campaign_name"],
+                                    "Аудитория": e["n"], "Средний прогноз net": e["expected"],
+                                    "Прогноз с поправкой на риск": e["lower"]} for e in report["campaigns"]]), hide_index=True)
         st.caption("Прогноз относится к финальным кампаниям. Эффекты пилотов к нему не прибавлены: возможны повторные контакты.")
     with observations:
         st.dataframe(pd.DataFrame(report["pilots"]), hide_index=True)
-        st.caption("observed_lift_ratio — шумное наблюдение уже с учётом выбранного канала.")
+        st.caption("ratio — шумное наблюдение observed_lift_ratio уже с учётом выбранного канала; mean_base и se_base — оценка базового эффекта и её неопределённость.")
         st.write(f"После пилотов: бюджет {report['budget_after_pilots']:,.0f}; контактов доступно {report['contacts_after_pilots']:,}.")
     with evaluation:
         result = report["evaluation"]
@@ -77,12 +76,19 @@ if "report" in st.session_state:
         st.write(f"Уникальных абонентов: {result['unique_customers_targeted']:,}. Статус оценщика: {result['status']}.")
         st.caption("Официальный локальный оценщик применяет дедупликацию эффекта. Его модель не передаётся агенту.")
     with explanation:
-        reasons = {"candidate": "Гипотезы из сглаженной истории", "pilot": "Проверки и обновление оценок",
-                   "selected": "Выбранные кампании", "rejected": "Отказы", "plan": "Остатки ресурсов"}
+        reasons = {"pilots": "Проверки и обновление оценок", "campaigns": "Выбранные кампании",
+                   "warnings": "Предупреждения", "resources": "Расходы и остатки ресурсов"}
         category = st.selectbox("Этап решения", list(reasons), format_func=reasons.get)
-        st.json([e for e in report["log"] if e["event"] == category])
+        if category == "resources":
+            st.json({key: report[key] for key in (
+                "pilot_cost", "pilot_contacts", "final_cost", "final_contacts",
+                "budget_after_pilots", "contacts_after_pilots")})
+        else:
+            st.json(report[category])
+        for warning in report["warnings"]:
+            st.warning(warning)
     st.download_button("Скачать отчёт запуска JSON", json.dumps(report, ensure_ascii=False, indent=2),
-                       file_name="beegrowth_report.json", mime="application/json")
+                       file_name="qadam_report.json", mime="application/json")
 
 st.divider()
 st.caption("Официальный submission всегда создаётся make_submission.py с seed=42 и может отличаться от выбранного демо-запуска.")
