@@ -12,7 +12,7 @@ from local_eval import evaluate_agent
 
 def main():
     report = {}
-    for name, cls in (("QADAM", Agent), ("template", Baseline)):
+    for name, cls in (("BeeGrowth", Agent), ("template", Baseline)):
         rows = []
         for seed in range(10):
             captured = io.StringIO()
@@ -20,7 +20,7 @@ def main():
             with contextlib.redirect_stdout(captured):
                 result = evaluate_agent(cls(), seed=seed, verbose=False)
             output = captured.getvalue()
-            if result is None or "Агент упал" in output or (name == "QADAM" and "отброшена" in output):
+            if result is None or "Агент упал" in output or (name == "BeeGrowth" and "отброшена" in output):
                 raise RuntimeError(output or "empty evaluation")
             rows.append({"seed": seed, "net": result["net_arpu_gain"], "pilots": result["n_pilots"],
                          "seconds": time.perf_counter() - started, "output": output})

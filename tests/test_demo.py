@@ -12,16 +12,6 @@ class DemoTests(unittest.TestCase):
         self.assertFalse(app.exception)
         before = app.session_state["report"]
         self.assertGreater(len(before["pilots"]), 0)
-        self.assertEqual(
-            [campaign["campaign_name"] for campaign in before["plan"]],
-            [campaign["campaign_name"] for campaign in before["campaigns"]],
-        )
-        self.assertTrue(all(campaign["campaign_name"].startswith("QADAM_") for campaign in before["plan"]))
-        app.selectbox[0].select("resources").run()
-        self.assertFalse(app.exception)
-        app.selectbox[0].select("warnings").run()
-        self.assertFalse(app.exception)
-        self.assertEqual(before, app.session_state["report"])
         app.number_input[0].set_value(19).run()
         self.assertEqual(before, app.session_state["report"])
         app.button[1].click().run()

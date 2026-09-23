@@ -1,84 +1,137 @@
+import os
 import unittest
 from unittest.mock import patch
+import numpy as np
 import pandas as pd
-from agent import Agent
+
+from agent import Agent, audience
+from mock_environment import make_mock_env
+from scoring_core import apply_filters, sanitize_campaigns, validate_strategy
 
 
-class PublicEnvironment:
-    """Independent test double, not organizer implementation or hidden effects."""
-    def __init__(self, effect=.2, budget=100000, contacts=15000, size=400):
-        self.customer_profile = pd.DataFrame([{'ID_NUMBER': i, 'current_tariff': 'a' if i < size//2 else 'b',
-            'arpu_segment': 'HIGH', 'data_segment': 'HEAVY', 'call_segment': 'MEDIUM',
-            'predicted_arpu': 6000.0} for i in range(size)])
-        self.tariffs = pd.DataFrame({'tariff_plan_code':['a','b','c'], 'price_tariff':[1000,2000,3000]})
-        self.channels = {'push':{'cost_per_contact':0,'conversion_multiplier':.5},
-                         'sms':{'cost_per_contact':4,'conversion_multiplier':.65},
-                         'call':{'cost_per_contact':160,'conversion_multiplier':1.2}}
-        self.remaining_budget=budget;self.remaining_contacts=contacts;self.pilots_left=20
-        self.effect=effect;self.pilot_history=[];self.calls=[]
+class PublicTestEnv:
+    """Controlled observations independent of organizer effect functions."""
+    def __init__(self, mode="positive", budget=100000, contacts=15000):
+        self.customer_profile = pd.DataFrame({
+            "ID_NUMBER": range(600), "current_tariff": ["a"]*300 + ["b"]*300,
+            "arpu_segment": ["HIGH"]*600, "data_segment": ["HEAVY"]*600,
+            "call_segment": ["LOW"]*600, "predicted_arpu": [6000.]*600})
+        self.tariffs = pd.DataFrame({"tariff_plan_code": ["a", "b", "c"], "price_tariff": [1000., 2000., 3000.]})
+        self.channels = {"push": {"cost_per_contact": 0, "conversion_multiplier": .5},
+                         "sms": {"cost_per_contact": 4, "conversion_multiplier": .65}}
+        self.remaining_budget, self.remaining_contacts = budget, contacts
+        self.pilots_left, self.pilot_history, self.mode = 20, [], mode
 
-    def run_pilot(self, target_tariff, channel, n_customers, **filters):
+    def run_pilot(self, n_customers, **campaign):
         assert 10 <= n_customers <= 200
-        assert self.pilots_left > 0
-        cost = n_customers * self.channels[channel]['cost_per_contact']
-        assert cost <= self.remaining_budget and n_customers <= self.remaining_contacts
-        self.remaining_budget -= cost;self.remaining_contacts -= n_customers;self.pilots_left -= 1
-        self.calls.append((target_tariff,channel,n_customers,filters))
-        result={'n_customers':n_customers,'observed_lift_ratio':self.effect * self.channels[channel]['conversion_multiplier'],'cost':cost}
+        assert n_customers <= len(audience(self.customer_profile, campaign))
+        # Deliberately return fewer people than requested.
+        actual = max(10, n_customers // 2)
+        cost = actual * self.channels[campaign["channel"]]["cost_per_contact"]
+        assert cost <= self.remaining_budget and actual <= self.remaining_contacts
+        self.remaining_budget -= cost
+        self.remaining_contacts -= actual
+        self.pilots_left -= 1
+        value = .4 if self.mode == "positive" else -.4
+        if self.mode == "target":
+            value = .6 if campaign["target_tariff"] == "b" else -.5
+        if self.mode == "noisy":
+            value = [-.05, .45, -.02, .3][len(self.pilot_history) % 4]
+        result = {"n_customers": actual, "cost": cost, "observed_lift_ratio": value}
         self.pilot_history.append(result)
         return result
 
 
 class AgentTests(unittest.TestCase):
-    def run_agent(self, env, **options):
-        with patch.object(Agent, '_history', return_value={}):
-            agent=Agent(**options);plan=agent.act(env)
-        return agent,plan
-
-    def assert_limits(self, agent, plan, budget=100000, contacts=15000):
+    def check_limits(self, env, plan, budget=100000, contacts=15000):
         self.assertTrue(1 <= len(plan) <= 10)
-        a=agent.report
-        self.assertLessEqual(a['pilot_cost']+a['final_cost'],budget)
-        self.assertLessEqual(a['pilot_contacts']+a['final_contacts'],contacts)
-        self.assertTrue(all(x['n']<=5000 for x in a['campaigns']))
-        self.assertEqual(len(a['campaigns']),len({c['cell_id'] for c in a['campaigns']}))
+        spent = sum(p["cost"] for p in env.pilot_history)
+        used_contacts = sum(p["n_customers"] for p in env.pilot_history)
+        seen = set()
+        for c in plan:
+            self.assertNotIn("explicit_ids", c)
+            segment = audience(env.customer_profile, c)
+            self.assertTrue(0 < len(segment) <= 5000)
+            self.assertFalse(seen & set(segment.ID_NUMBER))
+            seen.update(segment.ID_NUMBER)
+            spent += len(segment) * env.channels[c["channel"]]["cost_per_contact"]
+            used_contacts += len(segment)
+        self.assertLessEqual(spent, budget)
+        self.assertLessEqual(used_contacts, contacts)
+        self.assertLessEqual(len(env.pilot_history), 20)
 
-    def test_limits_and_pilot_use(self):
-        env=PublicEnvironment();a,p=self.run_agent(env)
-        self.assertTrue(env.calls);self.assert_limits(a,p)
+    def test_official_contract_and_filters(self):
+        env, _ = make_mock_env(seed=42)
+        plan = Agent().act(env)
+        self.assertGreater(len(env.pilot_history), 0)
+        self.check_limits(env, plan)
+        self.assertEqual(plan, sanitize_campaigns(plan, env.tariffs))
+        validate_strategy(pd.DataFrame(plan), env.tariffs)
+        for c in plan + [{"filter_current_tariff": "tariff_1; tariff_2", "filter_arpu_segment": "LOW"}]:
+            self.assertEqual(list(audience(env.customer_profile, c).ID_NUMBER), list(apply_filters(env.customer_profile, pd.Series(c)).ID_NUMBER))
 
-    def test_zero_budget_uses_free_channel(self):
-        a,p=self.run_agent(PublicEnvironment(budget=0))
-        self.assert_limits(a,p,budget=0);self.assertTrue(all(c['channel']=='push' for c in p))
+    def test_observations_change_plan(self):
+        first, second = PublicTestEnv(), PublicTestEnv("target")
+        a, b = Agent().act(first), Agent().act(second)
+        self.assertNotEqual(a, b)
+        self.check_limits(first, a)
+        self.check_limits(second, b)
 
-    def test_negative_feedback_changes_selection_and_is_disclosed(self):
-        positive,pp=self.run_agent(PublicEnvironment(effect=.7))
-        negative,np=self.run_agent(PublicEnvironment(effect=-.7))
-        self.assertNotEqual(pp,np)
-        self.assertTrue(negative.report['warnings']);self.assertLess(negative.report['expected_final_gain'],0)
-        self.assert_limits(negative,np)
+    def test_negative_noisy_and_actual_sample(self):
+        for mode in ("negative", "noisy"):
+            env, agent = PublicTestEnv(mode), Agent()
+            plan = agent.act(env)
+            self.check_limits(env, plan)
+            events = [e for e in agent.log if e["event"] == "pilot"]
+            self.assertTrue(events)
+            self.assertEqual(sum(e["observation"]["n_customers"] for e in events), sum(p["n_customers"] for p in env.pilot_history))
+            self.assertTrue(all(e["observation"]["n_customers"] < e["requested"] for e in events))
+            if mode == "negative":
+                self.assertTrue(any("fallback" in e.get("reason", "") for e in agent.log))
 
-    def test_deterministic(self):
-        _,a=self.run_agent(PublicEnvironment());_,b=self.run_agent(PublicEnvironment());self.assertEqual(a,b)
+    def test_small_budget_contacts(self):
+        env = PublicTestEnv(budget=40, contacts=400)
+        self.check_limits(env, Agent().act(env), budget=40, contacts=400)
 
-    def test_never_blindly_retries_failed_pilot(self):
-        env=PublicEnvironment()
-        with patch.object(env,'run_pilot',side_effect=RuntimeError('budget consumed')) as call:
-            a,p=self.run_agent(env)
-        self.assertEqual(call.call_count,1);self.assertEqual(p,[]);self.assertTrue(a.report['warnings'])
+    def test_empty_missing_invalid(self):
+        env = PublicTestEnv()
+        env.customer_profile = env.customer_profile.iloc[:0]
+        self.assertEqual([], Agent().act(env))
+        env = PublicTestEnv()
+        env.customer_profile.loc[0, "predicted_arpu"] = np.nan
+        env.customer_profile.loc[300, "arpu_segment"] = None
+        self.check_limits(env, Agent().act(env))
 
-    def test_large_cell_split_preserves_5000_limit(self):
-        env=PublicEnvironment(size=12000)
-        env.customer_profile.loc[env.customer_profile.ID_NUMBER%2==0,'data_segment']='LITE'
-        a,p=self.run_agent(env,max_pilots=8);self.assert_limits(a,p)
+    def test_reproducibility_no_key_and_log_error(self):
+        with patch.dict(os.environ, {}, clear=True):
+            agent = Agent(log_path="agent.py/impossible.json")
+            first = agent.act(PublicTestEnv())
+            self.assertEqual(first, agent.act(PublicTestEnv()))
+        env1, _ = make_mock_env(seed=13)
+        env2, _ = make_mock_env(seed=13)
+        self.assertEqual(Agent().act(env1), Agent().act(env2))
 
-    def test_small_remaining_contacts_never_exceeded(self):
-        env=PublicEnvironment(size=40,contacts=150)
-        a,p=self.run_agent(env,max_pilots=1);self.assert_limits(a,p,contacts=150)
+    def test_pilot_error(self):
+        env = PublicTestEnv()
+        with patch.object(env, "run_pilot", side_effect=RuntimeError("unavailable")):
+            self.check_limits(env, Agent().act(env))
 
-    def test_nonfinite_feedback_stops_without_invalid_json(self):
-        env=PublicEnvironment(effect=float('nan'));a,p=self.run_agent(env)
-        self.assertEqual(len(env.calls),1);self.assertEqual(p,[]);self.assertTrue(a.report['warnings'])
+    def test_adaptive_experiment_count_and_size(self):
+        strong, ambiguous = PublicTestEnv("positive"), PublicTestEnv("noisy")
+        a, b = Agent(), Agent()
+        a.act(strong)
+        b.act(ambiguous)
+        self.assertNotEqual(len(strong.pilot_history), len(ambiguous.pilot_history))
+        self.assertGreater(len({e["requested"] for e in b.log if e["event"] == "pilot"}), 1)
+
+    def test_split_large_cells(self):
+        env = PublicTestEnv()
+        frame = pd.concat([env.customer_profile.iloc[:300]] * 20, ignore_index=True)
+        frame.ID_NUMBER = range(len(frame))
+        frame.loc[:2999, "data_segment"] = "LITE"
+        env.customer_profile = frame
+        self.check_limits(env, Agent().act(env))
 
 
-if __name__=='__main__': unittest.main()
+if __name__ == "__main__":
+    unittest.main()

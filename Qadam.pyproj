@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{1F872EF8-52E1-4E28-8CCB-4E360FC93E1C}</ProjectGuid><ProjectHome>.</ProjectHome><StartupFile>server.py</StartupFile><WorkingDirectory>.</WorkingDirectory><OutputPath>.</OutputPath><Name>Qadam</Name></PropertyGroup>
-  <ItemGroup><Compile Include="agent.py"/><Compile Include="server.py"/><Compile Include="local_eval.py"/><Compile Include="make_submission.py"/><Content Include="README.md"/><Content Include="requirements.txt"/><Content Include="web\index.html"/><Content Include="web\style.css"/><Content Include="web\app.js"/></ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
-</Project>

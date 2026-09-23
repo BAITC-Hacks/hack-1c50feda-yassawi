@@ -1,8 +1,0 @@
-{
-  "version": "0.2.0",
-  "configurations": [
-    {"name": "QADAM: dashboard", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/server.py", "console": "integratedTerminal", "cwd": "${workspaceFolder}", "justMyCode": true},
-    {"name": "QADAM: official evaluation (10 seeds)", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/local_eval.py", "args": ["--runs", "10"], "console": "integratedTerminal", "cwd": "${workspaceFolder}"},
-    {"name": "QADAM: submission", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/make_submission.py", "console": "integratedTerminal", "cwd": "${workspaceFolder}"}
-  ]
-}

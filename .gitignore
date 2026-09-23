@@ -1,29 +1,11 @@
-.venv/
+# Әр компьютерде жеке жасалатын файлдар
 qamqornet.db
-.streamlit/secrets.toml
-*.tmp
 __pycache__/
-*.py[cod]
-.pytest_cache/
+.venv/
+*.pyc
 .env
 .env.*
-*.key
-*.pem
-runtime/
-.vs/
-*.user
-*.suo
-# Organizer materials remain local. Each reviewer supplies their participant pack.
-data/
-customer_profile.csv
-tariff_dictionary.csv
-feature_dictionary.csv
-environment.py
-mock_environment.py
-scoring_core.py
-local_eval.py
-make_submission.py
-agent_template.py
-PARTICIPANT_GUIDE.*
-*.zip
-# Keep deterministic submission.csv: a required submission artifact, no customer IDs.
+!.env.example
+.streamlit/secrets.toml
+*.tmp
+.pytest_cache/
