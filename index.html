@@ -65,22 +65,129 @@
 <div class="toast" id="toast"></div>
 <div class="modal-backdrop" id="modal"><form class="modal" id="reportForm"><h2>Байланыс мәселесін хабарлау</h2><p>Өтінім картадағы әлсіз аймақтарды анықтауға көмектеседі.</p><label for="issueType">Мәселе түрі</label><select id="issueType"><option>Сигнал әлсіз</option><option>Интернет баяу</option><option>Байланыс үзіліп тұр</option><option>Қамту аймағы жоқ</option></select><label for="issuePlace">Мекенжай немесе аудан</label><input id="issuePlace" placeholder="Мысалы: Ясауи көшесі" required /><label for="issueProvider">Ұялы байланыс операторы</label><select id="issueProvider"><option>Tele2</option><option>Beeline</option><option>activ</option><option>Басқа</option></select><div class="modal-actions"><button type="button" class="btn btn-plain" id="cancel">Болдырмау</button><button class="btn btn-primary">Өтінім жіберу</button></div></form></div>
 <script>
-  const toast=document.getElementById('toast');let toastTimer;
-  function notify(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2600)}
-  document.getElementById('reportBtn').addEventListener('click',()=>document.getElementById('modal').classList.add('show'));
-  document.getElementById('cancel').addEventListener('click',()=>document.getElementById('modal').classList.remove('show'));
-  document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')e.currentTarget.classList.remove('show')});
-  document.getElementById('reportForm').addEventListener('submit',e=>{e.preventDefault();const type=document.getElementById('issueType').value,place=document.getElementById('issuePlace').value,provider=document.getElementById('issueProvider').value;const item=document.createElement('div');item.className='issue';item.innerHTML='<div class="issue-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 9v4m0 4h.01M10.3 3.9 2.8 17a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3l-7.5-13.1a2 2 0 0 0-3.4 0Z"/></svg></div><div class="issue-main"><div class="issue-title"></div><div class="issue-meta"></div></div><span class="badge">Жаңа</span>';item.querySelector('.issue-title').textContent=type+' — '+place;item.querySelector('.issue-meta').textContent='Қазір ғана · '+provider;document.getElementById('issuesList').prepend(item);document.getElementById('activeCount').textContent=String(Number(document.getElementById('activeCount').textContent)+1);e.currentTarget.reset();document.getElementById('modal').classList.remove('show');notify('Өтінім қабылданды. Рақмет!')});
-  document.getElementById('operatorFilter').addEventListener('change',e=>{document.querySelectorAll('.pin').forEach(pin=>pin.style.display=e.target.value==='all'||pin.dataset.provider===e.target.value?'':'none');notify(e.target.value==='all'?'Барлық оператор көрсетілді':e.target.options[e.target.selectedIndex].text+' картасы')});
-  document.getElementById('city').addEventListener('change',e=>{document.querySelector('.map-caption').textContent=e.target.value.replace(' қаласы','')+', Қазақстан';notify(e.target.value+' деректері көрсетілді')});
-  document.getElementById('bell').addEventListener('click',()=>notify('Сізде 3 жаңа желі хабарламасы бар'));
-  document.getElementById('locate').addEventListener('click',()=>notify('Карта Түркістан қаласының орталығына бағытталды'));
-  let zoom=1;document.getElementById('zoomIn').addEventListener('click',()=>{zoom=Math.min(zoom+.12,1.5);document.querySelector('.map svg').style.transform='scale('+zoom+')'});document.getElementById('zoomOut').addEventListener('click',()=>{zoom=Math.max(zoom-.12,1);document.querySelector('.map svg').style.transform='scale('+zoom+')'});
-  document.getElementById('period').addEventListener('change',e=>notify('Кезең жаңартылды: '+e.target.value));
-  document.getElementById('viewAll').addEventListener('click',()=>notify('Барлық өтінім тізімі жүктелді'));
-  document.getElementById('rankInfo').addEventListener('click',()=>notify('Балл жылдамдық, қамту және тұрақтылық бойынша есептеледі'));
-  document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('sidebar').classList.toggle('open'));
-  document.querySelectorAll('[data-nav]').forEach(link=>link.addEventListener('click',()=>{document.querySelectorAll('[data-nav]').forEach(a=>a.classList.remove('active'));link.classList.add('active');document.getElementById('sidebar').classList.remove('open')}));
+  // Өтінімдер браузерден сервердегі SQLite дерекқорына жіберіледі.
+  const API_URL = '/api/reports';
+  const toast = document.getElementById('toast');
+  const issuesList = document.getElementById('issuesList');
+  let reports = [];
+  let toastTimer;
+
+  function notify(message) {
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+  }
+
+  function timeAgo(dateText) {
+    const minutes = Math.max(0, Math.floor((Date.now() - new Date(dateText).getTime()) / 60000));
+    if (minutes < 1) return 'Қазір ғана';
+    if (minutes < 60) return `${minutes} мин бұрын`;
+    if (minutes < 1440) return `${Math.floor(minutes / 60)} сағ бұрын`;
+    return `${Math.floor(minutes / 1440)} күн бұрын`;
+  }
+
+  function makeIssueCard(report) {
+    const item = document.createElement('div');
+    item.className = 'issue';
+    item.innerHTML = '<div class="issue-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 9v4m0 4h.01M10.3 3.9 2.8 17a2 2 0 0 0 1.7 3h15a2 2 0 0 0 1.7-3l-7.5-13.1a2 2 0 0 0-3.4 0Z"/></svg></div><div class="issue-main"><div class="issue-title"></div><div class="issue-meta"></div></div><span class="badge"></span>';
+    item.querySelector('.issue-title').textContent = `${report.issue_type} — ${report.location}`;
+    item.querySelector('.issue-meta').textContent = `${timeAgo(report.created_at)} · ${report.operator}`;
+
+    const badge = item.querySelector('.badge');
+    badge.textContent = report.status;
+    if (report.status === 'Бақылауда') badge.classList.add('monitor');
+    if (report.status === 'Тексерілуде') badge.classList.add('done');
+    return item;
+  }
+
+  function showReports() {
+    issuesList.replaceChildren(...reports.slice(0, 6).map(makeIssueCard));
+    document.getElementById('activeCount').textContent = reports.length;
+    document.querySelector('#activeCount').closest('.stat').querySelector('.stat-foot').textContent =
+      `${reports.length} өтінім дерекқорда сақталған`;
+  }
+
+  async function loadReports() {
+    try {
+      const response = await fetch(API_URL);
+      if (!response.ok) throw new Error('Серверден жауап келмеді');
+      reports = await response.json();
+      showReports();
+    } catch (error) {
+      // Сервер қосылмаған кезде бет ашыла береді. Өтінім сақтау үшін server.py керек.
+      notify('Дерекқорға қосылмады. README ішіндегі нұсқаумен серверді қосыңыз.');
+    }
+  }
+
+  document.getElementById('reportBtn').addEventListener('click', () => {
+    document.getElementById('modal').classList.add('show');
+  });
+  document.getElementById('cancel').addEventListener('click', () => {
+    document.getElementById('modal').classList.remove('show');
+  });
+  document.getElementById('modal').addEventListener('click', event => {
+    if (event.target.id === 'modal') event.currentTarget.classList.remove('show');
+  });
+
+  document.getElementById('reportForm').addEventListener('submit', async event => {
+    event.preventDefault();
+    const payload = {
+      issue_type: document.getElementById('issueType').value,
+      location: document.getElementById('issuePlace').value.trim(),
+      operator: document.getElementById('issueProvider').value
+    };
+
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!response.ok) throw new Error('Өтінімді сақтау мүмкін болмады');
+      const savedReport = await response.json();
+      reports.unshift(savedReport);
+      showReports();
+      event.currentTarget.reset();
+      document.getElementById('modal').classList.remove('show');
+      notify('Өтінім дерекқорға сақталды. Рақмет!');
+    } catch (error) {
+      notify('Сақталмады. README нұсқауымен серверді іске қосыңыз.');
+    }
+  });
+
+  document.getElementById('operatorFilter').addEventListener('change', event => {
+    document.querySelectorAll('.pin').forEach(pin => {
+      pin.style.display = event.target.value === 'all' || pin.dataset.provider === event.target.value ? '' : 'none';
+    });
+    notify(event.target.value === 'all' ? 'Барлық оператор көрсетілді' : `${event.target.options[event.target.selectedIndex].text} картасы`);
+  });
+  document.getElementById('city').addEventListener('change', event => {
+    document.querySelector('.map-caption').textContent = `${event.target.value.replace(' қаласы', '')}, Қазақстан`;
+    notify(`${event.target.value} деректері көрсетілді`);
+  });
+  document.getElementById('bell').addEventListener('click', () => notify('Сізде 3 жаңа желі хабарламасы бар'));
+  document.getElementById('locate').addEventListener('click', () => notify('Карта Түркістан қаласының орталығына бағытталды'));
+  let zoom = 1;
+  document.getElementById('zoomIn').addEventListener('click', () => {
+    zoom = Math.min(zoom + 0.12, 1.5);
+    document.querySelector('.map svg').style.transform = `scale(${zoom})`;
+  });
+  document.getElementById('zoomOut').addEventListener('click', () => {
+    zoom = Math.max(zoom - 0.12, 1);
+    document.querySelector('.map svg').style.transform = `scale(${zoom})`;
+  });
+  document.getElementById('period').addEventListener('change', event => notify(`Кезең жаңартылды: ${event.target.value}`));
+  document.getElementById('viewAll').addEventListener('click', () => notify('Барлық өтінім тізімі жүктелді'));
+  document.getElementById('rankInfo').addEventListener('click', () => notify('Балл жылдамдық, қамту және тұрақтылық бойынша есептеледі'));
+  document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('sidebar').classList.toggle('open'));
+  document.querySelectorAll('[data-nav]').forEach(link => link.addEventListener('click', () => {
+    document.querySelectorAll('[data-nav]').forEach(item => item.classList.remove('active'));
+    link.classList.add('active');
+    document.getElementById('sidebar').classList.remove('open');
+  }));
+
+  loadReports();
 </script>
 </body>
 </html>
