@@ -1,0 +1,10 @@
+test_baseline_seed42_reproduces_independent_audit (tests.test_split_eval.SplitEvaluationTests.test_baseline_seed42_reproduces_independent_audit) ... ok
+test_exactly_one_act_precedes_internal_ids_and_all_scores (tests.test_split_eval.SplitEvaluationTests.test_exactly_one_act_precedes_internal_ids_and_all_scores) ... ok
+test_overlapping_final_increment_is_not_standalone_score (tests.test_split_eval.SplitEvaluationTests.test_overlapping_final_increment_is_not_standalone_score) ... ok
+test_snapshot_unchanged_and_no_import_cache_written (tests.test_split_eval.SplitEvaluationTests.test_snapshot_unchanged_and_no_import_cache_written) ... ok
+test_snapshot_verifier_detects_file_changes_and_additions (tests.test_split_eval.SplitEvaluationTests.test_snapshot_verifier_detects_file_changes_and_additions) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.999s
+
+OK

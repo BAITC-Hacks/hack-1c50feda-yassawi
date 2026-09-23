@@ -1,0 +1,172 @@
+{
+  "purpose": "Deterministic packaging verification on the existing official seed 42; no new strategy experiment or parameter optimization.",
+  "agent_sha256": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc",
+  "submission_sha256": "e0531bbc31c53e86a3656dd0a1e7eb66c43cbddedd9312541478305a9446fa8e",
+  "root_agent_and_submission_unchanged": true,
+  "python_version": "3.14.6",
+  "python_executable_used": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\.venv\\Scripts\\python.exe",
+  "requirements": {
+    "numpy": {
+      "version": "2.5.3",
+      "requires_python": ">=3.12"
+    },
+    "pandas": {
+      "version": "3.0.6",
+      "requires_python": ">=3.11"
+    },
+    "streamlit": {
+      "version": "1.64.0",
+      "requires_python": ">=3.10"
+    }
+  },
+  "pip_check": {
+    "returncode": 0,
+    "stdout": "No broken requirements found."
+  },
+  "runtime_files": {
+    "agent.py": {
+      "bytes": 14774,
+      "sha256": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc"
+    },
+    "demo_app.py": {
+      "bytes": 7517,
+      "sha256": "8e4ef7104d40f84524275d78aea213dbe213f9a9a121b7faa85d0d5289d82977"
+    },
+    "local_eval.py": {
+      "bytes": 4891,
+      "sha256": "16c3b96b00487c02ee470a23e6b4554c220a5ea817b1ea46b75cfac158dd5b47"
+    },
+    "make_submission.py": {
+      "bytes": 2171,
+      "sha256": "25c82a71640814de613261a2684824db66c53c7f948af5aa8ba333ae263a9622"
+    },
+    "mock_environment.py": {
+      "bytes": 4579,
+      "sha256": "e1e4a480126d2896e89a868194b3ed7f7ee48d7c5fc2c8a2491970d8e231f506"
+    },
+    "environment.py": {
+      "bytes": 11769,
+      "sha256": "8003a305ea9a560270ee875b2c48a6b1fbf8198d9c6c680e4827542532bb3dd1"
+    },
+    "scoring_core.py": {
+      "bytes": 17868,
+      "sha256": "ba68595daebb12418000fa4d59ffbbf156df045f589bdbb789f3531145c58327"
+    },
+    "requirements.txt": {
+      "bytes": 45,
+      "sha256": "258bb48b5fd31f7c44fe064ee8224a3e98b73045127899e75e55edead6dd82d4"
+    },
+    "customer_profile.csv": {
+      "bytes": 6170133,
+      "sha256": "a85e9badf4cb51b1ba8c43a868498b6fa8075509f3cd8e19ef72e1c25a6dc815"
+    },
+    "data/change_tariff.csv": {
+      "bytes": 908574,
+      "sha256": "c52d7dad11fccc7425afe6d36a44a1fa03c8cc148be2039ce264d0c5c100f230"
+    },
+    "data/dict_tariff.csv": {
+      "bytes": 668,
+      "sha256": "a34d81dacffbb937ddd542e87d421afcea4842379acfbad55b8d59bdf710f4be"
+    },
+    "submission.csv": {
+      "bytes": 165,
+      "sha256": "e0531bbc31c53e86a3656dd0a1e7eb66c43cbddedd9312541478305a9446fa8e"
+    }
+  },
+  "runtime_imports": {
+    "agent.py": [
+      "json",
+      "math",
+      "numpy",
+      "pandas",
+      "pathlib",
+      "time"
+    ],
+    "demo_app.py": [
+      "contextlib",
+      "hashlib",
+      "io",
+      "json",
+      "local_eval",
+      "pandas",
+      "pathlib",
+      "streamlit",
+      "subprocess",
+      "sys",
+      "types"
+    ],
+    "local_eval.py": [
+      "agent",
+      "mock_environment",
+      "pandas",
+      "scoring_core",
+      "sys"
+    ],
+    "make_submission.py": [
+      "agent",
+      "mock_environment",
+      "pandas"
+    ],
+    "mock_environment.py": [
+      "environment",
+      "numpy",
+      "pandas"
+    ],
+    "environment.py": [
+      "numpy",
+      "pandas"
+    ],
+    "scoring_core.py": [
+      "numpy",
+      "pandas"
+    ]
+  },
+  "required_external_top_level_packages": [
+    "numpy",
+    "pandas",
+    "streamlit"
+  ],
+  "requirements_complete_for_runtime": true,
+  "runtime_smoke": {
+    "isolated_mode": true,
+    "runtime_directory": "C:\\Users\\aktor\\AppData\\Local\\Temp\\beegrowth_runtime_packaging__ck09s0u",
+    "archives_absent": true,
+    "original_application_paths_absent_from_sys_path": true,
+    "project_venv_site_packages_allowed": true,
+    "module_paths": {
+      "agent": "C:\\Users\\aktor\\AppData\\Local\\Temp\\beegrowth_runtime_packaging__ck09s0u\\agent.py",
+      "make_submission": "C:\\Users\\aktor\\AppData\\Local\\Temp\\beegrowth_runtime_packaging__ck09s0u\\make_submission.py",
+      "mock_environment": "C:\\Users\\aktor\\AppData\\Local\\Temp\\beegrowth_runtime_packaging__ck09s0u\\mock_environment.py",
+      "environment": "C:\\Users\\aktor\\AppData\\Local\\Temp\\beegrowth_runtime_packaging__ck09s0u\\environment.py",
+      "local_eval": "C:\\Users\\aktor\\AppData\\Local\\Temp\\beegrowth_runtime_packaging__ck09s0u\\local_eval.py",
+      "scoring_core": "C:\\Users\\aktor\\AppData\\Local\\Temp\\beegrowth_runtime_packaging__ck09s0u\\scoring_core.py"
+    },
+    "in_memory_official_builder_csv_byte_equal": true,
+    "demo_fresh_start": true,
+    "demo_seed": 42,
+    "demo_agent_path": "C:\\Users\\aktor\\AppData\\Local\\Temp\\beegrowth_runtime_packaging__ck09s0u\\agent.py",
+    "demo_agent_sha256": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc",
+    "demo_pilots": 16,
+    "demo_status": "PASS",
+    "demo_net": 13741.73031855683,
+    "history_valid_rows": 13410,
+    "history_unavailable": false,
+    "demo_submission_button_official_csv_byte_equal": true,
+    "elapsed_seconds": 5.544318500091322,
+    "temporary_directory_removed_after_check": true
+  },
+  "reproduction": [
+    "Copy only listed runtime_files except submission.csv into an empty temporary directory; do not copy snapshots or experiments.",
+    "Start the project virtual-environment Python with -I in that directory, add only this runtime directory to sys.path, and verify original application paths are absent from sys.path; the original .venv/site-packages is allowed for installed third-party dependencies.",
+    "Import all six runtime modules and verify their __file__ parents equal the temporary directory.",
+    "Call make_submission.build_submission(agent.Agent()) at its official default seed 42, serialize using DataFrame.to_csv(index=False), and compare bytes against the existing root submission.csv without writing the root file.",
+    "Use streamlit.testing.v1.AppTest to open copied demo_app.py, run seed 42, check source hash, loaded history and pilots, and use its official submission button inside the temporary directory; compare CSV bytes against the root submission.",
+    "Run python -m pip check; verify agent.py and submission.csv hashes are unchanged."
+  ],
+  "limitations": [
+    "Fresh dependency installation on a second operating system was not performed.",
+    "Streamlit was tested through AppTest; no visual browser check was performed.",
+    "Tests of archived stage1 behavior require the archived experiment; runtime agent and demo do not.",
+    "The current virtual environment was created from D:\\anaconda; reproduce it locally using Python, not by committing .venv."
+  ]
+}

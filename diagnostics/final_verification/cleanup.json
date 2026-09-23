@@ -1,0 +1,119 @@
+﻿{
+    "deleted_directories":  [
+                                "__pycache__",
+                                "tests\\__pycache__"
+                            ],
+    "deleted_files":  [
+                          {
+                              "path":  "__pycache__/agent.cpython-314.pyc",
+                              "bytes":  23048,
+                              "sha256":  "e4208bf48d6b8f7d1ccd94e3f5e8c79326aa7d386213c9635fb8cc634d42831b",
+                              "source":  "agent.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "__pycache__/agent_template.cpython-314.pyc",
+                              "bytes":  3685,
+                              "sha256":  "1358ea8781bb3b5605a3f4163ac55f643e0012caf14f624a3f7a72ddbff112e7",
+                              "source":  "agent_template.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "__pycache__/environment.cpython-314.pyc",
+                              "bytes":  14092,
+                              "sha256":  "14838a42bc5024f0f44eed7abce23ea112d5f236ee5bd8b4f35409be44e1175f",
+                              "source":  "environment.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "__pycache__/local_eval.cpython-314.pyc",
+                              "bytes":  6863,
+                              "sha256":  "b15e06f4b99cdf9b4bb0bde8d94edb749090ef304d25a9d4a12e5e97e2413dd8",
+                              "source":  "local_eval.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "__pycache__/make_submission.cpython-314.pyc",
+                              "bytes":  3078,
+                              "sha256":  "76ba395b53255ed46604b09077d4340e64b657fae47184e9a2be422b32946db4",
+                              "source":  "make_submission.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "__pycache__/mock_environment.cpython-314.pyc",
+                              "bytes":  6400,
+                              "sha256":  "5edde6b417ed3787e921ebe50a6b542edf77ae21377526f83b2e5fc75fcab6be",
+                              "source":  "mock_environment.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "__pycache__/render_stage1_report.cpython-314.pyc",
+                              "bytes":  25922,
+                              "sha256":  "470f09c12b246db71601cfe6a5936f804fb3f34269847a03343a0866a97cfc47",
+                              "source":  "render_stage1_report.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "__pycache__/scoring_core.cpython-314.pyc",
+                              "bytes":  21732,
+                              "sha256":  "95f4139e0f39dad25ff50572c99799cdad9020eed19734888c1fd0c94285e282",
+                              "source":  "scoring_core.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "__pycache__/split_eval.cpython-314.pyc",
+                              "bytes":  25337,
+                              "sha256":  "76fc9ff13646a55e49720ba228a42cd90a2fc756d721f30f775788e9480fc9b6",
+                              "source":  "split_eval.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "__pycache__/stabilization_audit.cpython-314.pyc",
+                              "bytes":  8150,
+                              "sha256":  "5df8ee857c36741da5e8e8e2e16b0d4774e93df4c8f0964d1d43cefd0916444f",
+                              "source":  "stabilization_audit.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "tests/__pycache__/test_agent.cpython-314.pyc",
+                              "bytes":  13954,
+                              "sha256":  "91bba39aaa9fff59f54f1a2b4fbc7491511cf3b6d57fa996f9eb6d1610978341",
+                              "source":  "tests/test_agent.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "tests/__pycache__/test_demo.cpython-314.pyc",
+                              "bytes":  9053,
+                              "sha256":  "94bab37b26d616803154ae763ddb67561b56c9e5a0fa96facb8a166ad8aaa2db",
+                              "source":  "tests/test_demo.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "tests/__pycache__/test_exploration.cpython-314.pyc",
+                              "bytes":  15005,
+                              "sha256":  "f7a2f5a96e2ba6b819c98654f49df77ad01dcc85a8e3af0d7f8d5b5f2b092008",
+                              "source":  "tests/test_exploration.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          },
+                          {
+                              "path":  "tests/__pycache__/test_split_eval.cpython-314.pyc",
+                              "bytes":  10250,
+                              "sha256":  "e2a19cd013d464ecbf4ec9ea7752c292f77c5a52f6fd14754596e720e5790f06",
+                              "source":  "tests/test_split_eval.py",
+                              "reason":  "Reproducible Python bytecode cache; source preserved; ignored and untracked; no direct file dependencies found"
+                          }
+                      ],
+    "total_bytes":  186569,
+    "dependency_audit":  "Imports, dynamic loading, path references, tests, README and configuration reviewed; caches never directly loaded; no reparse points; protected archives excluded",
+    "retained":  [
+                     "BEEGROWTH_CODEX_NEXT_STEP.md: unique user note, not staged",
+                     "diagnostics: unique historical evidence",
+                     "snapshots/before_stage1: frozen full baseline",
+                     "experiments/stage1_expanded_search: experimental source and proof"
+                 ],
+    "absent":  [
+                   "server.py",
+                   "index.html"
+               ],
+    "reversible":  "All removed files are regenerable bytecode with corresponding preserved sources"
+}

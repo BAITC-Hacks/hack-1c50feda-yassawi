@@ -1,0 +1,16 @@
+test_adaptive_experiment_count_and_size (test_agent.AgentTests.test_adaptive_experiment_count_and_size) ... ok
+test_empty_missing_invalid (test_agent.AgentTests.test_empty_missing_invalid) ... ok
+test_negative_noisy_and_actual_sample (test_agent.AgentTests.test_negative_noisy_and_actual_sample) ... ok
+test_observations_change_plan (test_agent.AgentTests.test_observations_change_plan) ... ok
+test_official_contract_and_filters (test_agent.AgentTests.test_official_contract_and_filters) ... ok
+test_pilot_error (test_agent.AgentTests.test_pilot_error) ... ok
+test_reproducibility_no_key_and_log_error (test_agent.AgentTests.test_reproducibility_no_key_and_log_error) ... ok
+test_small_budget_contacts (test_agent.AgentTests.test_small_budget_contacts) ... ok
+test_split_large_cells (test_agent.AgentTests.test_split_large_cells) ... ok
+test_run_rerun_and_submission (test_demo.DemoTests.test_run_rerun_and_submission) ... 2026-09-23 13:41:07.349 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 10.039s
+
+OK

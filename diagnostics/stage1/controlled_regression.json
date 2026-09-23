@@ -1,0 +1,46 @@
+[
+  {
+    "version": "before",
+    "pilots": 6,
+    "visited": [
+      "x0",
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x5"
+    ],
+    "remaining_contacts": 14400,
+    "seconds": 0.16324259992688894
+  },
+  {
+    "version": "after",
+    "pilots": 16,
+    "visited": [
+      "x0",
+      "x1",
+      "x2",
+      "x3",
+      "x4",
+      "x5",
+      "x6",
+      "x7",
+      "x0",
+      "x0",
+      "x1",
+      "x1",
+      "x2",
+      "x2",
+      "x3",
+      "x3"
+    ],
+    "remaining_contacts": 13400,
+    "stop": [
+      {
+        "event": "pilot_stop",
+        "reason": "internal_pilot_limit"
+      }
+    ],
+    "seconds": 0.1358229999896139
+  }
+]

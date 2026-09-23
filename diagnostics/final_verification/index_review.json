@@ -1,0 +1,400 @@
+{
+  "scope": "Staged tree reviewed before adding this audit file; no push planned",
+  "staged_change_count": 103,
+  "staged_paths": [
+    ".gitattributes",
+    ".gitignore",
+    "DEMO.md",
+    "README.md",
+    "SUBMISSION.md",
+    "demo_app.py",
+    "diagnostics/final_verification/cleanup.json",
+    "diagnostics/final_verification/commands.json",
+    "diagnostics/final_verification/common_tests.txt",
+    "diagnostics/final_verification/demo_http.json",
+    "diagnostics/final_verification/demo_scenario.json",
+    "diagnostics/final_verification/demo_tests.txt",
+    "diagnostics/final_verification/diagnostic_tests.txt",
+    "diagnostics/final_verification/integrity_after.json",
+    "diagnostics/final_verification/integrity_before.json",
+    "diagnostics/final_verification/known_limit_tests.txt",
+    "diagnostics/final_verification/local_eval.txt",
+    "diagnostics/final_verification/local_eval_10.txt",
+    "diagnostics/final_verification/make_submission_first.txt",
+    "diagnostics/final_verification/make_submission_second.txt",
+    "diagnostics/final_verification/package_check.json",
+    "diagnostics/final_verification/pip_check.txt",
+    "diagnostics/final_verification/report.md",
+    "diagnostics/final_verification/split_validation.json",
+    "diagnostics/final_verification/stage1_experiment_tests.txt",
+    "diagnostics/stabilization/audit_output.txt",
+    "diagnostics/stabilization/common_tests.txt",
+    "diagnostics/stabilization/diagnostic_tests.txt",
+    "diagnostics/stabilization/history_and_integrity.json",
+    "diagnostics/stabilization/local_eval.txt",
+    "diagnostics/stabilization/local_eval_10.txt",
+    "diagnostics/stabilization/main_split_seed42.json",
+    "diagnostics/stabilization/make_submission_first.txt",
+    "diagnostics/stabilization/make_submission_second.txt",
+    "diagnostics/stabilization/report.md",
+    "diagnostics/stabilization/stage1_experiment_tests.txt",
+    "diagnostics/stabilization/submission_verification.json",
+    "diagnostics/stage1/STATUS.md",
+    "diagnostics/stage1/checks.md",
+    "diagnostics/stage1/comparison_additional.json",
+    "diagnostics/stage1/comparison_primary.json",
+    "diagnostics/stage1/controlled_regression.json",
+    "diagnostics/stage1/experiment_plan.json",
+    "diagnostics/stage1/integrity.json",
+    "diagnostics/stage1/local_eval.txt",
+    "diagnostics/stage1/local_eval_10.txt",
+    "diagnostics/stage1/make_submission.txt",
+    "diagnostics/stage1/method.md",
+    "diagnostics/stage1/report.md",
+    "diagnostics/stage1/submission_hash.json",
+    "diagnostics/stage1/tests.txt",
+    "diagnostics/submission_prep/completeness.json",
+    "diagnostics/submission_prep/final_check.json",
+    "diagnostics/submission_prep/git_scan.json",
+    "diagnostics/submission_prep/integrity_after.json",
+    "diagnostics/submission_prep/integrity_before.json",
+    "experiments/stage1_expanded_search/README.md",
+    "experiments/stage1_expanded_search/agent.py",
+    "experiments/stage1_expanded_search/data/change_tariff.csv",
+    "experiments/stage1_expanded_search/diagnostics_stage1/checks.md",
+    "experiments/stage1_expanded_search/diagnostics_stage1/comparison_additional.json",
+    "experiments/stage1_expanded_search/diagnostics_stage1/comparison_primary.json",
+    "experiments/stage1_expanded_search/diagnostics_stage1/controlled_regression.json",
+    "experiments/stage1_expanded_search/diagnostics_stage1/experiment_plan.json",
+    "experiments/stage1_expanded_search/diagnostics_stage1/integrity.json",
+    "experiments/stage1_expanded_search/diagnostics_stage1/local_eval.txt",
+    "experiments/stage1_expanded_search/diagnostics_stage1/local_eval_10.txt",
+    "experiments/stage1_expanded_search/diagnostics_stage1/make_submission.txt",
+    "experiments/stage1_expanded_search/diagnostics_stage1/method.md",
+    "experiments/stage1_expanded_search/diagnostics_stage1/report.md",
+    "experiments/stage1_expanded_search/diagnostics_stage1/submission_hash.json",
+    "experiments/stage1_expanded_search/diagnostics_stage1/tests.txt",
+    "experiments/stage1_expanded_search/manifest.json",
+    "experiments/stage1_expanded_search/render_stage1_report.py",
+    "experiments/stage1_expanded_search/split_eval.py",
+    "experiments/stage1_expanded_search/submission.csv",
+    "experiments/stage1_expanded_search/tests_source/test_agent.py",
+    "experiments/stage1_expanded_search/tests_source/test_demo.py",
+    "experiments/stage1_expanded_search/tests_source/test_exploration.py",
+    "experiments/stage1_expanded_search/tests_source/test_split_eval.py",
+    "experiments/stage1_expanded_search/versions.json",
+    "render_stage1_report.py",
+    "snapshots/before_stage1/README.md",
+    "snapshots/before_stage1/agent.py",
+    "snapshots/before_stage1/data/change_tariff.csv",
+    "snapshots/before_stage1/diagnostics/benchmark.json",
+    "snapshots/before_stage1/diagnostics/data_audit.json",
+    "snapshots/before_stage1/diagnostics/decisions_seed42.json",
+    "snapshots/before_stage1/diagnostics/local_eval.txt",
+    "snapshots/before_stage1/diagnostics/local_eval_10.txt",
+    "snapshots/before_stage1/diagnostics/submission_sha256.txt",
+    "snapshots/before_stage1/diagnostics/tests.txt",
+    "snapshots/before_stage1/diagnostics/verification.json",
+    "snapshots/before_stage1/manifest.json",
+    "snapshots/before_stage1/organizer_hashes.json",
+    "snapshots/before_stage1/submission.csv",
+    "split_eval.py",
+    "stabilization_audit.py",
+    "submission.csv",
+    "tests/README.md",
+    "tests/test_demo.py",
+    "tests/test_exploration.py",
+    "tests/test_split_eval.py"
+  ],
+  "forbidden_paths": [],
+  "user_note_not_staged": true,
+  "all_runtime_files_and_document_links_in_index": true,
+  "protected_files_byte_equal_to_index": [
+    {
+      "path": "agent.py",
+      "sha256": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc"
+    },
+    {
+      "path": "submission.csv",
+      "sha256": "e0531bbc31c53e86a3656dd0a1e7eb66c43cbddedd9312541478305a9446fa8e"
+    },
+    {
+      "path": "customer_profile.csv",
+      "sha256": "a85e9badf4cb51b1ba8c43a868498b6fa8075509f3cd8e19ef72e1c25a6dc815"
+    },
+    {
+      "path": "feature_dictionary.csv",
+      "sha256": "80bb9dddea7a054c3ef6569805013efbe313c7918a9d72d06203d1534e8f5c21"
+    },
+    {
+      "path": "tariff_dictionary.csv",
+      "sha256": "d3e6588f5d8e8e51202b4a77b2d4c0243080965a82d8e1d9411149220dd9df1c"
+    },
+    {
+      "path": "data/arpu_monthly.csv",
+      "sha256": "83d96b61c38a8bf7cdf5f07bc4f17f7f2f39885559c496fc28c266cef8ad3c4a"
+    },
+    {
+      "path": "data/change_tariff.csv",
+      "sha256": "c52d7dad11fccc7425afe6d36a44a1fa03c8cc148be2039ce264d0c5c100f230"
+    },
+    {
+      "path": "data/dict_tariff.csv",
+      "sha256": "a34d81dacffbb937ddd542e87d421afcea4842379acfbad55b8d59bdf710f4be"
+    },
+    {
+      "path": "data/traffic.csv",
+      "sha256": "cb0a3f8827d8be6989b65dc5bf0b7c901047cf64e485f4ee74e3c24787ee846c"
+    },
+    {
+      "path": "agent_template.py",
+      "sha256": "4eb369b732d4756bb7861c0dccab8af09d5fe17cde0fa629981d3eea5b5eb10d"
+    },
+    {
+      "path": "environment.py",
+      "sha256": "8003a305ea9a560270ee875b2c48a6b1fbf8198d9c6c680e4827542532bb3dd1"
+    },
+    {
+      "path": "mock_environment.py",
+      "sha256": "e1e4a480126d2896e89a868194b3ed7f7ee48d7c5fc2c8a2491970d8e231f506"
+    },
+    {
+      "path": "scoring_core.py",
+      "sha256": "ba68595daebb12418000fa4d59ffbbf156df045f589bdbb789f3531145c58327"
+    },
+    {
+      "path": "local_eval.py",
+      "sha256": "16c3b96b00487c02ee470a23e6b4554c220a5ea817b1ea46b75cfac158dd5b47"
+    },
+    {
+      "path": "make_submission.py",
+      "sha256": "25c82a71640814de613261a2684824db66c53c7f948af5aa8ba333ae263a9622"
+    },
+    {
+      "path": "PARTICIPANT_GUIDE.md",
+      "sha256": "996b12258f2fba2b144a1eca8fb8b10ac34d23dc4c9218193e330dbf8b9306ab"
+    },
+    {
+      "path": "PARTICIPANT_GUIDE.pdf",
+      "sha256": "b261a5df8e2555bce5f3ac1545a4daf8a8e5a308c3609bf7c04e7904b4d37e4a"
+    },
+    {
+      "path": "diagnostics/stage1/STATUS.md",
+      "sha256": "de8b052c2f6190e476fb9a79da195d7a3caf8ed56b0f3863b8f9594d752a57d6"
+    },
+    {
+      "path": "diagnostics/stage1/checks.md",
+      "sha256": "a4bc052ac7ceeeaa208310e6beba9e7ba9ddb67f389c628664dc47ed4a1c3275"
+    },
+    {
+      "path": "diagnostics/stage1/comparison_additional.json",
+      "sha256": "536f598fba300c2b85469023746e1e435d8b47e1b6c44887fb509caadf33becb"
+    },
+    {
+      "path": "diagnostics/stage1/comparison_primary.json",
+      "sha256": "2eb4374ac4aee3af7a7d490a6643fa4965ba23fbf312707bb0994d9eb97180b1"
+    },
+    {
+      "path": "diagnostics/stage1/controlled_regression.json",
+      "sha256": "41ee3aba0f51c65b23b8f11fdc979de453b0edd25daa920b75edace77375b91f"
+    },
+    {
+      "path": "diagnostics/stage1/experiment_plan.json",
+      "sha256": "cfa10570eea6864b7a5472e8ac056d6941c32effc6b8993755ecef042bb5464c"
+    },
+    {
+      "path": "diagnostics/stage1/integrity.json",
+      "sha256": "053baf12d324f916713af8d94ae31bdd580e2a365382a3f7eb3e6d993aa02a0f"
+    },
+    {
+      "path": "diagnostics/stage1/local_eval.txt",
+      "sha256": "b1b432d86b08629892f906ed93abde9ad7a0b5be5cf1e417176280295e41fac9"
+    },
+    {
+      "path": "diagnostics/stage1/local_eval_10.txt",
+      "sha256": "6156bf47f2e55f7d76c5e349903bd5478931c8dffde4891923fa0f7016d306f7"
+    },
+    {
+      "path": "diagnostics/stage1/make_submission.txt",
+      "sha256": "a8efa3013f9b0d908f701fa253bd3938fe0a9a326c8ac8e8f3a1bebf8ac4749b"
+    },
+    {
+      "path": "diagnostics/stage1/method.md",
+      "sha256": "75edcbdf98b41cecdd482e583d1ff75370c6d681591483a48c480ec13d2ddacb"
+    },
+    {
+      "path": "diagnostics/stage1/report.md",
+      "sha256": "66baf5b861d46098f43500940c6942496056ada9c59a0d074f600d504f6145ab"
+    },
+    {
+      "path": "diagnostics/stage1/submission_hash.json",
+      "sha256": "19aed2f5f544a89206314829347a4bf8f890dc80b3c2c40c12d1ae40091352a5"
+    },
+    {
+      "path": "diagnostics/stage1/tests.txt",
+      "sha256": "772647a57c8f95096021b108adf1984752d072665a83e246a9f87c57636a128f"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/README.md",
+      "sha256": "5236aa3da87d9db5071459a5b39e3342412d03f1e405b9cdacc1ab8fbbdfb081"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/agent.py",
+      "sha256": "43b88055a4f71af19b39ff49694b124b11873cd812ff9a0b9388e57867279658"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/data/change_tariff.csv",
+      "sha256": "c52d7dad11fccc7425afe6d36a44a1fa03c8cc148be2039ce264d0c5c100f230"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/checks.md",
+      "sha256": "a4bc052ac7ceeeaa208310e6beba9e7ba9ddb67f389c628664dc47ed4a1c3275"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/comparison_additional.json",
+      "sha256": "536f598fba300c2b85469023746e1e435d8b47e1b6c44887fb509caadf33becb"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/comparison_primary.json",
+      "sha256": "2eb4374ac4aee3af7a7d490a6643fa4965ba23fbf312707bb0994d9eb97180b1"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/controlled_regression.json",
+      "sha256": "41ee3aba0f51c65b23b8f11fdc979de453b0edd25daa920b75edace77375b91f"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/experiment_plan.json",
+      "sha256": "cfa10570eea6864b7a5472e8ac056d6941c32effc6b8993755ecef042bb5464c"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/integrity.json",
+      "sha256": "053baf12d324f916713af8d94ae31bdd580e2a365382a3f7eb3e6d993aa02a0f"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/local_eval.txt",
+      "sha256": "b1b432d86b08629892f906ed93abde9ad7a0b5be5cf1e417176280295e41fac9"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/local_eval_10.txt",
+      "sha256": "6156bf47f2e55f7d76c5e349903bd5478931c8dffde4891923fa0f7016d306f7"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/make_submission.txt",
+      "sha256": "a8efa3013f9b0d908f701fa253bd3938fe0a9a326c8ac8e8f3a1bebf8ac4749b"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/method.md",
+      "sha256": "75edcbdf98b41cecdd482e583d1ff75370c6d681591483a48c480ec13d2ddacb"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/report.md",
+      "sha256": "66baf5b861d46098f43500940c6942496056ada9c59a0d074f600d504f6145ab"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/submission_hash.json",
+      "sha256": "19aed2f5f544a89206314829347a4bf8f890dc80b3c2c40c12d1ae40091352a5"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/diagnostics_stage1/tests.txt",
+      "sha256": "772647a57c8f95096021b108adf1984752d072665a83e246a9f87c57636a128f"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/manifest.json",
+      "sha256": "a58e2afaa7255622d1928308e58fb692aa13899e9787f9e6141b9b1b02e9d627"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/render_stage1_report.py",
+      "sha256": "3060d4870664ed27bdac3b330639be2883014b5e22f0d53850ab616058d33f76"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/split_eval.py",
+      "sha256": "9b9ed7587146649823870744b0aeed578370c76633b72bb7bc7f6400b893378d"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/submission.csv",
+      "sha256": "cd9e209f503151d078b3d217464887b6d1efbd18ad615abf6b12ad900fa4b21a"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/tests_source/test_agent.py",
+      "sha256": "79874f8914901c4ae57a7353eebce02e79f51816676d9e33227022c1e36d37cc"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/tests_source/test_demo.py",
+      "sha256": "8d8643923b0772b144b064ad0afa58013d4bd289b6a8eaf7c8923adc4913460a"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/tests_source/test_exploration.py",
+      "sha256": "5125f59a2b7090b640c0686334f021dcd40935579104f2e7b0ea42953a6cac42"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/tests_source/test_split_eval.py",
+      "sha256": "2bd8b6a272e78835637f0f045ae1f903daeea2443315df33b5e5aa762a6e30bd"
+    },
+    {
+      "path": "experiments/stage1_expanded_search/versions.json",
+      "sha256": "b880ff90a15dab410b48450a53c3d432ee85e19afecfb4c1206051d0d8c81d55"
+    },
+    {
+      "path": "snapshots/before_stage1/README.md",
+      "sha256": "5e4857a256b410459bf5788ccec8c2f450c65529cd96a6a0e9cd755d1d405854"
+    },
+    {
+      "path": "snapshots/before_stage1/agent.py",
+      "sha256": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc"
+    },
+    {
+      "path": "snapshots/before_stage1/data/change_tariff.csv",
+      "sha256": "c52d7dad11fccc7425afe6d36a44a1fa03c8cc148be2039ce264d0c5c100f230"
+    },
+    {
+      "path": "snapshots/before_stage1/diagnostics/benchmark.json",
+      "sha256": "4a3f16937fe930b0031eca5be6e6c8cd064b4399e8b90c67162756338d9ad5a7"
+    },
+    {
+      "path": "snapshots/before_stage1/diagnostics/data_audit.json",
+      "sha256": "8e3242363a8439b1d4d26ade25dc3f100dbd0b6921d47affabd884e4c8c3d97a"
+    },
+    {
+      "path": "snapshots/before_stage1/diagnostics/decisions_seed42.json",
+      "sha256": "097ae4026b437f61034bee4b673970d80c7fcd0a53c9ccd343ae7bd460f7c82f"
+    },
+    {
+      "path": "snapshots/before_stage1/diagnostics/local_eval.txt",
+      "sha256": "bea91b22ce5a39218d4c8f6ec672d4ea23edf3179116320365183a1bfab68106"
+    },
+    {
+      "path": "snapshots/before_stage1/diagnostics/local_eval_10.txt",
+      "sha256": "2dbbc9b51167fc3b50d960ce8ac003369aa57a86adbad0630add4e651707e185"
+    },
+    {
+      "path": "snapshots/before_stage1/diagnostics/submission_sha256.txt",
+      "sha256": "899ad61298eb3c886221d03f4c71e41a463b325712bc743ccddfea2bb83dae8c"
+    },
+    {
+      "path": "snapshots/before_stage1/diagnostics/tests.txt",
+      "sha256": "7a590d4b82bf9ed0396f3a44126768e22d22128d8d59ed6b7df5b7830b5621fb"
+    },
+    {
+      "path": "snapshots/before_stage1/diagnostics/verification.json",
+      "sha256": "65dd13ad0e9cf75875020dfb0feea353a81f1756037de1bbe39ddda3f54cc5d5"
+    },
+    {
+      "path": "snapshots/before_stage1/manifest.json",
+      "sha256": "3799d249de1fe14b5552647d4368ec98ce6100b56d66fd2370e6703ac306cf7d"
+    },
+    {
+      "path": "snapshots/before_stage1/organizer_hashes.json",
+      "sha256": "ff98618249fb9dfe24f49085d657340a80465d6bc459d6ad2ab1904c44b0ed50"
+    },
+    {
+      "path": "snapshots/before_stage1/submission.csv",
+      "sha256": "e0531bbc31c53e86a3656dd0a1e7eb66c43cbddedd9312541478305a9446fa8e"
+    }
+  ],
+  "secret_pattern_scan": {
+    "text_blobs_scanned": 120,
+    "matched_paths": [],
+    "includes_utf16_historical_logs": true
+  },
+  "local_outgoing_commits_before_final_commit": "0"
+}

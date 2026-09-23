@@ -1,0 +1,35 @@
+{
+  "expected_agent_sha256": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc",
+  "actual_agent_sha256": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc",
+  "protected_before_after_equal": true,
+  "submission_unchanged_sha256": "e0531bbc31c53e86a3656dd0a1e7eb66c43cbddedd9312541478305a9446fa8e",
+  "organizer_files_verified": 15,
+  "archives_verified": {
+    "before_stage1": {
+      "files_verified": 13,
+      "manifest_sha256": "3799d249de1fe14b5552647d4368ec98ce6100b56d66fd2370e6703ac306cf7d"
+    },
+    "stage1_experiment": {
+      "files_verified": 24,
+      "manifest_sha256": "a58e2afaa7255622d1928308e58fb692aa13899e9787f9e6141b9b1b02e9d627"
+    }
+  },
+  "local_document_links_checked": 24,
+  "missing_links": [],
+  "ignored_paths_verified": [
+    ".venv/Scripts/python.exe",
+    ".env",
+    ".env.local",
+    "__pycache__/agent.pyc",
+    ".streamlit/secrets.toml",
+    "exports/demo.json",
+    "diagnostics/local_runs/output.json",
+    "sample.tmp",
+    "sample.pem",
+    "sample.key"
+  ],
+  "tracked_sensitive_or_cache_paths": [],
+  "staged_paths": [],
+  "git_diff_check_returncode": 0,
+  "scope": "Final integrity, documentation and packaging checks only; no new strategy experiment, optimization, git staging, commit or push."
+}

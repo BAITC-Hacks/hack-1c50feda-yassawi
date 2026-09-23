@@ -1,0 +1,20 @@
+test_fresh_report_uses_current_root_source_despite_cached_import (tests.test_demo.DemoTests.test_fresh_report_uses_current_root_source_despite_cached_import) ... 2026-09-23 16:18:57.571 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_run_rerun_and_submission (tests.test_demo.DemoTests.test_run_rerun_and_submission) ... 2026-09-23 16:19:00.409 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_stale_report_is_discarded (tests.test_demo.DemoTests.test_stale_report_is_discarded) ... 2026-09-23 16:19:07.337 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-23 16:19:07.337 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-23 16:19:07.759 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-23 16:19:07.759 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_stale_submission_is_discarded (tests.test_demo.DemoTests.test_stale_submission_is_discarded) ... 2026-09-23 16:19:08.194 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-23 16:19:08.195 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-23 16:19:08.609 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-23 16:19:08.609 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-09-23 16:19:08.610 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 13.036s
+
+OK

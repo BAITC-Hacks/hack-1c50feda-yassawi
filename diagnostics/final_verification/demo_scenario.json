@@ -1,0 +1,258 @@
+{
+  "agent_sha256": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc",
+  "seed": 42,
+  "initial_audience_metrics": {
+    "Абонентов в исходной аудитории": "23,441",
+    "Исходная сумма predicted_arpu — не доход агента": "150,641,084"
+  },
+  "tab_labels": [
+    "Прогноз агента",
+    "Наблюдения пилотов",
+    "Локальный оценщик",
+    "Объяснения"
+  ],
+  "pilots": 16,
+  "campaigns": [
+    {
+      "campaign_name": "BeeGrowth_01",
+      "filter_current_tariff": "tariff_10",
+      "filter_arpu_segment": "HIGH",
+      "target_tariff": "tariff_14",
+      "channel": "push"
+    }
+  ],
+  "evaluation": {
+    "team_id": "local",
+    "baseline_total_arpu": 150641084.24626845,
+    "gross_arpu_lift": 22659.73031855683,
+    "total_cost": 8918.0,
+    "net_arpu_gain": 13741.73031855683,
+    "total_arpu_after": 150654825.976587,
+    "growth_vs_baseline_pct": 0.009122166364716158,
+    "status": "PASS",
+    "n_campaigns": 17,
+    "total_contacts": 4722,
+    "unique_customers_targeted": 3684,
+    "coverage_pct": 15.716053069408302,
+    "avg_gain_per_customer": 3.7301113785441995,
+    "roi": 2.540898219169862,
+    "risk_score_pct": 82.79044516829534,
+    "budget_used_pct": 8.918,
+    "campaigns_detail": [
+      {
+        "name": "pilot_1",
+        "channel": "push",
+        "cost": 0,
+        "n_contacts": 100,
+        "gross_lift": 1467.0655524950023,
+        "n_negative": 0,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_2",
+        "channel": "push",
+        "cost": 0,
+        "n_contacts": 100,
+        "gross_lift": -229.08594087385515,
+        "n_negative": 100,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_3",
+        "channel": "push",
+        "cost": 0,
+        "n_contacts": 100,
+        "gross_lift": 93.9783648775806,
+        "n_negative": 0,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_4",
+        "channel": "push",
+        "cost": 0,
+        "n_contacts": 100,
+        "gross_lift": 7412.398007437945,
+        "n_negative": 0,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_5",
+        "channel": "push",
+        "cost": 0,
+        "n_contacts": 100,
+        "gross_lift": 22489.533176700817,
+        "n_negative": 0,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_6",
+        "channel": "push",
+        "cost": 0,
+        "n_contacts": 100,
+        "gross_lift": -5061.702489069838,
+        "n_negative": 100,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_7",
+        "channel": "sms",
+        "cost": 400,
+        "n_contacts": 100,
+        "gross_lift": -290.4552189762194,
+        "n_negative": 100,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_8",
+        "channel": "digital_ads",
+        "cost": 2200,
+        "n_contacts": 100,
+        "gross_lift": -397.7021621057963,
+        "n_negative": 100,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_9",
+        "channel": "push",
+        "cost": 0,
+        "n_contacts": 143,
+        "gross_lift": -343.06862072713324,
+        "n_negative": 143,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_10",
+        "channel": "sms",
+        "cost": 572,
+        "n_contacts": 143,
+        "gross_lift": -446.19232950721954,
+        "n_negative": 143,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_11",
+        "channel": "push",
+        "cost": 0,
+        "n_contacts": 100,
+        "gross_lift": -237.94852292252997,
+        "n_negative": 100,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_12",
+        "channel": "sms",
+        "cost": 400,
+        "n_contacts": 100,
+        "gross_lift": -319.4552753396524,
+        "n_negative": 100,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_13",
+        "channel": "digital_ads",
+        "cost": 3146,
+        "n_contacts": 143,
+        "gross_lift": -578.4303630089073,
+        "n_negative": 143,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_14",
+        "channel": "digital_ads",
+        "cost": 2200,
+        "n_contacts": 100,
+        "gross_lift": -400.5941376817656,
+        "n_negative": 100,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_15",
+        "channel": "push",
+        "cost": 0,
+        "n_contacts": 143,
+        "gross_lift": 2030.193620789734,
+        "n_negative": 0,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "pilot_16",
+        "channel": "push",
+        "cost": 0,
+        "n_contacts": 100,
+        "gross_lift": 1420.155847934424,
+        "n_negative": 0,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      },
+      {
+        "name": "BeeGrowth_01",
+        "channel": "push",
+        "cost": 0,
+        "n_contacts": 2950,
+        "gross_lift": -7081.568044763933,
+        "n_negative": 2950,
+        "capped_at_campaign_limit": false,
+        "capped_at_reach_budget": false,
+        "capped_at_money_budget": false
+      }
+    ],
+    "n_pilots": 16
+  },
+  "forecast_rows": [
+    {
+      "Кампания": "BeeGrowth_01",
+      "Аудитория": 2950,
+      "Средний прогноз net": 1328482.7951475729,
+      "Прогноз с поправкой на риск": 302218.7353333709
+    }
+  ],
+  "rerun_does_not_call_evaluator": true,
+  "download_buttons": [
+    {
+      "label": "Скачать отчёт запуска JSON",
+      "url_present": true
+    },
+    {
+      "label": "Скачать официальный submission.csv",
+      "url_present": true
+    }
+  ],
+  "official_download_bytes_equal_to_csv": true,
+  "submission_sha256": "e0531bbc31c53e86a3656dd0a1e7eb66c43cbddedd9312541478305a9446fa8e",
+  "history_unavailable": false,
+  "visual_browser_check": false,
+  "browser_download_click": false,
+  "scope": "AppTest verifies rendered element data, state, official generator and bytes offered to download; browser layout and physical browser download were not tested.",
+  "harness_note": "Initial ad-hoc tab-label assertion received ASCII-replaced Cyrillic through Windows PowerShell stdin. Repeated with OutputEncoding UTF-8; application and tests were not modified."
+}

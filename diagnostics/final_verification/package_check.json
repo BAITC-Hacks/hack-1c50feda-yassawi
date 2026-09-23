@@ -1,0 +1,314 @@
+{
+  "scope": "Post-cleanup documentation and package check before local commit; remote publication deferred by explicit user choice",
+  "protected_before_after_equal": true,
+  "deleted_cache_directories_absent": true,
+  "links": [
+    {
+      "document": "README.md",
+      "target": "agent.py",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "submission.csv",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/final_verification/report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/stabilization/submission_verification.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/data_audit.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/stabilization/history_and_integrity.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/submission_prep/completeness.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "tests/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "DEMO.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/final_verification/report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/final_verification/demo_scenario.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/stabilization/main_split_seed42.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/stabilization/local_eval_10.txt",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/stabilization/report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/stage1/report.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "diagnostics/stage1/STATUS.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "target": "SUBMISSION.md",
+      "exists": true
+    },
+    {
+      "document": "DEMO.md",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "document": "DEMO.md",
+      "target": "diagnostics/stabilization/main_split_seed42.json",
+      "exists": true
+    },
+    {
+      "document": "DEMO.md",
+      "target": "submission.csv",
+      "exists": true
+    },
+    {
+      "document": "DEMO.md",
+      "target": "diagnostics/final_verification/report.md",
+      "exists": true
+    },
+    {
+      "document": "DEMO.md",
+      "target": "diagnostics/final_verification/demo_scenario.json",
+      "exists": true
+    },
+    {
+      "document": "DEMO.md",
+      "target": "diagnostics/stabilization/main_split_seed42.json",
+      "exists": true
+    },
+    {
+      "document": "DEMO.md",
+      "target": "diagnostics/stabilization/report.md",
+      "exists": true
+    },
+    {
+      "document": "DEMO.md",
+      "target": "experiments/stage1_expanded_search/README.md",
+      "exists": true
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "DEMO.md",
+      "exists": true
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "diagnostics/submission_prep/git_scan.json",
+      "exists": true
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "diagnostics/final_verification/report.md",
+      "exists": true
+    },
+    {
+      "document": "SUBMISSION.md",
+      "target": "diagnostics/submission_prep/completeness.json",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "cleanup.json",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "commands.json",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "common_tests.txt",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "demo_tests.txt",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "known_limit_tests.txt",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "stage1_experiment_tests.txt",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "diagnostic_tests.txt",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "pip_check.txt",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "local_eval.txt",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "local_eval_10.txt",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "split_validation.json",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "make_submission_first.txt",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "make_submission_second.txt",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "demo_http.json",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "demo_scenario.json",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "integrity_before.json",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "integrity_after.json",
+      "exists": true
+    },
+    {
+      "document": "diagnostics/final_verification/report.md",
+      "target": "package_check.json",
+      "exists": true
+    }
+  ],
+  "required_runtime_files": {
+    "agent.py": {
+      "sha256": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc",
+      "bytes": 14774
+    },
+    "submission.csv": {
+      "sha256": "e0531bbc31c53e86a3656dd0a1e7eb66c43cbddedd9312541478305a9446fa8e",
+      "bytes": 165
+    },
+    "requirements.txt": {
+      "sha256": "258bb48b5fd31f7c44fe064ee8224a3e98b73045127899e75e55edead6dd82d4",
+      "bytes": 45
+    },
+    "README.md": {
+      "sha256": "3fd51805a6e8d03d82eb0f50beb878e12c6b63766fc5602a4b1aef9b45b99682",
+      "bytes": 24424
+    },
+    "DEMO.md": {
+      "sha256": "eff8fdc7225f8b07fe853e89d8eab7940cee1caffbec0844a099264336dedfcd",
+      "bytes": 12510
+    },
+    "demo_app.py": {
+      "sha256": "8e4ef7104d40f84524275d78aea213dbe213f9a9a121b7faa85d0d5289d82977",
+      "bytes": 7517
+    },
+    "environment.py": {
+      "sha256": "8003a305ea9a560270ee875b2c48a6b1fbf8198d9c6c680e4827542532bb3dd1",
+      "bytes": 11769
+    },
+    "mock_environment.py": {
+      "sha256": "e1e4a480126d2896e89a868194b3ed7f7ee48d7c5fc2c8a2491970d8e231f506",
+      "bytes": 4579
+    },
+    "scoring_core.py": {
+      "sha256": "ba68595daebb12418000fa4d59ffbbf156df045f589bdbb789f3531145c58327",
+      "bytes": 17868
+    },
+    "local_eval.py": {
+      "sha256": "16c3b96b00487c02ee470a23e6b4554c220a5ea817b1ea46b75cfac158dd5b47",
+      "bytes": 4891
+    },
+    "make_submission.py": {
+      "sha256": "25c82a71640814de613261a2684824db66c53c7f948af5aa8ba333ae263a9622",
+      "bytes": 2171
+    },
+    "customer_profile.csv": {
+      "sha256": "a85e9badf4cb51b1ba8c43a868498b6fa8075509f3cd8e19ef72e1c25a6dc815",
+      "bytes": 6170133
+    },
+    "data/change_tariff.csv": {
+      "sha256": "c52d7dad11fccc7425afe6d36a44a1fa03c8cc148be2039ce264d0c5c100f230",
+      "bytes": 908574
+    },
+    "data/dict_tariff.csv": {
+      "sha256": "a34d81dacffbb937ddd542e87d421afcea4842379acfbad55b8d59bdf710f4be",
+      "bytes": 668
+    }
+  },
+  "credential_pattern_scan": {
+    "scanned_text_files": 121,
+    "matched_paths": [],
+    "limitation": "Recognizable key/private-key patterns only; not a universal secret detector"
+  },
+  "baseline_head": "992b3ea11177ce401422ae6434fcd884bcdcd646",
+  "observed_origin_main": "b14878ea79b376acaa12e274355b8f243e198430",
+  "remote_before_local_commit_left_right_count": "0\t1",
+  "remote_agent_sha256": "af75621c65d2ac0b4f321a37280401a87a27075d7beb480163194991fb0a35ac"
+}

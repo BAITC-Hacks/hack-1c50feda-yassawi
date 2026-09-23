@@ -1,0 +1,20 @@
+﻿{
+    "unchanged_organizer_files":  [
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\customer_profile.csv",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\feature_dictionary.csv",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\tariff_dictionary.csv",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\data\\arpu_monthly.csv",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\data\\change_tariff.csv",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\data\\dict_tariff.csv",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\data\\traffic.csv",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\agent_template.py",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\environment.py",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\mock_environment.py",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\scoring_core.py",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\local_eval.py",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\make_submission.py",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\PARTICIPANT_GUIDE.md",
+                                      "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\PARTICIPANT_GUIDE.pdf"
+                                  ],
+    "frozen_candidate_matches":  true
+}

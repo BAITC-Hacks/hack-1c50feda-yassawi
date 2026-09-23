@@ -1,0 +1,237 @@
+{
+  "seed": 42,
+  "agent_error": null,
+  "net_pilots_only": 18123.313453922863,
+  "net_combined": 13741.73031855683,
+  "final_incremental_net": -4381.583135366032,
+  "net_final_standalone": -7081.568044763933,
+  "forecast_final_mean_net": 1328482.7951475729,
+  "forecast_final_risk_adjusted_net": 302218.7353333709,
+  "n_pilots": 16,
+  "n_final_campaigns": 1,
+  "unique_hypotheses_with_channel": 8,
+  "unique_hypotheses_without_channel": 6,
+  "candidate_count": 756,
+  "pilot_stops": [],
+  "final_campaigns": [
+    {
+      "campaign_name": "BeeGrowth_01",
+      "filter_current_tariff": "tariff_10",
+      "filter_arpu_segment": "HIGH",
+      "target_tariff": "tariff_14",
+      "channel": "push"
+    }
+  ],
+  "validation": {
+    "all_limits_ok": true,
+    "errors": [],
+    "sanitizer_dropped": 0,
+    "campaign_count_truncated": 0,
+    "scorer_trimmed": 0,
+    "final_audience_sizes": [
+      2950
+    ],
+    "total_contacts": 4722,
+    "total_cost": 8918.0,
+    "pilot_contacts": 1772,
+    "pilot_cost": 8918,
+    "final_contacts": 2950,
+    "final_cost": 0.0,
+    "budget_left_after_plan": 91082.0,
+    "contacts_left_after_plan": 10278
+  },
+  "campaigns_detail": [
+    {
+      "name": "pilot_1",
+      "channel": "push",
+      "cost": 0,
+      "n_contacts": 100,
+      "gross_lift": 1467.0655524950023,
+      "n_negative": 0,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_2",
+      "channel": "push",
+      "cost": 0,
+      "n_contacts": 100,
+      "gross_lift": -229.08594087385515,
+      "n_negative": 100,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_3",
+      "channel": "push",
+      "cost": 0,
+      "n_contacts": 100,
+      "gross_lift": 93.9783648775806,
+      "n_negative": 0,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_4",
+      "channel": "push",
+      "cost": 0,
+      "n_contacts": 100,
+      "gross_lift": 7412.398007437945,
+      "n_negative": 0,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_5",
+      "channel": "push",
+      "cost": 0,
+      "n_contacts": 100,
+      "gross_lift": 22489.533176700817,
+      "n_negative": 0,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_6",
+      "channel": "push",
+      "cost": 0,
+      "n_contacts": 100,
+      "gross_lift": -5061.702489069838,
+      "n_negative": 100,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_7",
+      "channel": "sms",
+      "cost": 400,
+      "n_contacts": 100,
+      "gross_lift": -290.4552189762194,
+      "n_negative": 100,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_8",
+      "channel": "digital_ads",
+      "cost": 2200,
+      "n_contacts": 100,
+      "gross_lift": -397.7021621057963,
+      "n_negative": 100,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_9",
+      "channel": "push",
+      "cost": 0,
+      "n_contacts": 143,
+      "gross_lift": -343.06862072713324,
+      "n_negative": 143,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_10",
+      "channel": "sms",
+      "cost": 572,
+      "n_contacts": 143,
+      "gross_lift": -446.19232950721954,
+      "n_negative": 143,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_11",
+      "channel": "push",
+      "cost": 0,
+      "n_contacts": 100,
+      "gross_lift": -237.94852292252997,
+      "n_negative": 100,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_12",
+      "channel": "sms",
+      "cost": 400,
+      "n_contacts": 100,
+      "gross_lift": -319.4552753396524,
+      "n_negative": 100,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_13",
+      "channel": "digital_ads",
+      "cost": 3146,
+      "n_contacts": 143,
+      "gross_lift": -578.4303630089073,
+      "n_negative": 143,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_14",
+      "channel": "digital_ads",
+      "cost": 2200,
+      "n_contacts": 100,
+      "gross_lift": -400.5941376817656,
+      "n_negative": 100,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_15",
+      "channel": "push",
+      "cost": 0,
+      "n_contacts": 143,
+      "gross_lift": 2030.193620789734,
+      "n_negative": 0,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "pilot_16",
+      "channel": "push",
+      "cost": 0,
+      "n_contacts": 100,
+      "gross_lift": 1420.155847934424,
+      "n_negative": 0,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    },
+    {
+      "name": "BeeGrowth_01",
+      "channel": "push",
+      "cost": 0,
+      "n_contacts": 2950,
+      "gross_lift": -7081.568044763933,
+      "n_negative": 2950,
+      "capped_at_campaign_limit": false,
+      "capped_at_reach_budget": false,
+      "capped_at_money_budget": false
+    }
+  ],
+  "evaluation_messages": "",
+  "act_seconds": 0.8856747000245377,
+  "evaluation_seconds": 0.9100685999728739,
+  "total_seconds": 2.01706360001117,
+  "agent_sha256": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc"
+}

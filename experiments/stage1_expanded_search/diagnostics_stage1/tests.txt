@@ -1,0 +1,27 @@
+test_adaptive_experiment_count_and_size (test_agent.AgentTests.test_adaptive_experiment_count_and_size) ... ok
+test_empty_missing_invalid (test_agent.AgentTests.test_empty_missing_invalid) ... ok
+test_negative_noisy_and_actual_sample (test_agent.AgentTests.test_negative_noisy_and_actual_sample) ... ok
+test_observations_change_plan (test_agent.AgentTests.test_observations_change_plan) ... ok
+test_official_contract_and_filters (test_agent.AgentTests.test_official_contract_and_filters) ... ok
+test_pilot_error (test_agent.AgentTests.test_pilot_error) ... ok
+test_reproducibility_no_key_and_log_error (test_agent.AgentTests.test_reproducibility_no_key_and_log_error) ... ok
+test_small_budget_contacts (test_agent.AgentTests.test_small_budget_contacts) ... ok
+test_split_large_cells (test_agent.AgentTests.test_split_large_cells) ... ok
+test_run_rerun_and_submission (test_demo.DemoTests.test_run_rerun_and_submission) ... 2026-09-23 14:50:41.149 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_new_target_after_six_negative_observations (test_exploration.ExplorationTests.test_new_target_after_six_negative_observations) ... ok
+test_search_exhaustion_and_timeout (test_exploration.ExplorationTests.test_search_exhaustion_and_timeout) ... ok
+test_six_negative_segments_do_not_end_search (test_exploration.ExplorationTests.test_six_negative_segments_do_not_end_search) ... ok
+test_stop_reasons_and_no_obligatory_full_budget (test_exploration.ExplorationTests.test_stop_reasons_and_no_obligatory_full_budget) ... ok
+test_strong_evidence_stops_with_unexplored_affordable_hypotheses (test_exploration.ExplorationTests.test_strong_evidence_stops_with_unexplored_affordable_hypotheses) ... ok
+test_tariff_names_are_not_special (test_exploration.ExplorationTests.test_tariff_names_are_not_special) ... ok
+test_baseline_seed42_reproduces_independent_audit (test_split_eval.SplitEvaluationTests.test_baseline_seed42_reproduces_independent_audit) ... ok
+test_exactly_one_act_precedes_internal_ids_and_all_scores (test_split_eval.SplitEvaluationTests.test_exactly_one_act_precedes_internal_ids_and_all_scores) ... ok
+test_overlapping_final_increment_is_not_standalone_score (test_split_eval.SplitEvaluationTests.test_overlapping_final_increment_is_not_standalone_score) ... ok
+test_snapshot_unchanged_and_no_import_cache_written (test_split_eval.SplitEvaluationTests.test_snapshot_unchanged_and_no_import_cache_written) ... ok
+test_snapshot_verifier_detects_file_changes_and_additions (test_split_eval.SplitEvaluationTests.test_snapshot_verifier_detects_file_changes_and_additions) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 13.480s
+
+OK

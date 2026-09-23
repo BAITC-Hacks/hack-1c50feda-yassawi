@@ -1,0 +1,400 @@
+{
+  "customer_profile.csv": {
+    "rows": 23441,
+    "columns": [
+      "ID_NUMBER",
+      "ARPU_current",
+      "ARPU_3m_avg",
+      "ARPU_trend",
+      "current_tariff",
+      "OUT_LOC_ONNET_MIN",
+      "OUT_LOC_OFFNET_MIN",
+      "OUT_LOC_OFFNET_UNPAID_MIN",
+      "OUT_LOC_OFFNET_PAID_MIN",
+      "OUT_INTER_MIN",
+      "OUT_LOC_LAND_MIN",
+      "OUT_LOCAL_ONNET_SMS_AMT",
+      "OUT_LOCAL_OFFNET_SMS_AMT",
+      "OUT_LOCAL_LAND_PAID_SMS_AMT",
+      "OUT_INTER_SMS_AMT",
+      "DATA_VOLUME",
+      "LTE_DATA_VOLUME",
+      "TOTAL_ROAM_CALL_AMT",
+      "TOTAL_ROAM_SMS_AMT",
+      "TOTAL_ROAM_GPRS_MB",
+      "COUNT_CONTACT",
+      "AVG_TRANSACT_CONTACT",
+      "SUM_TRANSACT_CONTACT",
+      "AVG_DURATION_CONTACT",
+      "COUNT_BASE_STATION",
+      "arpu_segment",
+      "data_segment",
+      "call_segment",
+      "predicted_arpu"
+    ],
+    "encoding": "utf-8-sig",
+    "separator": ",",
+    "dtypes": {
+      "ID_NUMBER": "int64",
+      "ARPU_current": "float64",
+      "ARPU_3m_avg": "float64",
+      "ARPU_trend": "str",
+      "current_tariff": "str",
+      "OUT_LOC_ONNET_MIN": "float64",
+      "OUT_LOC_OFFNET_MIN": "float64",
+      "OUT_LOC_OFFNET_UNPAID_MIN": "float64",
+      "OUT_LOC_OFFNET_PAID_MIN": "float64",
+      "OUT_INTER_MIN": "float64",
+      "OUT_LOC_LAND_MIN": "float64",
+      "OUT_LOCAL_ONNET_SMS_AMT": "float64",
+      "OUT_LOCAL_OFFNET_SMS_AMT": "float64",
+      "OUT_LOCAL_LAND_PAID_SMS_AMT": "float64",
+      "OUT_INTER_SMS_AMT": "float64",
+      "DATA_VOLUME": "float64",
+      "LTE_DATA_VOLUME": "float64",
+      "TOTAL_ROAM_CALL_AMT": "float64",
+      "TOTAL_ROAM_SMS_AMT": "float64",
+      "TOTAL_ROAM_GPRS_MB": "float64",
+      "COUNT_CONTACT": "float64",
+      "AVG_TRANSACT_CONTACT": "float64",
+      "SUM_TRANSACT_CONTACT": "float64",
+      "AVG_DURATION_CONTACT": "float64",
+      "COUNT_BASE_STATION": "float64",
+      "arpu_segment": "str",
+      "data_segment": "str",
+      "call_segment": "str",
+      "predicted_arpu": "float64"
+    },
+    "missing": {
+      "ID_NUMBER": 0,
+      "ARPU_current": 28,
+      "ARPU_3m_avg": 5,
+      "ARPU_trend": 5,
+      "current_tariff": 95,
+      "OUT_LOC_ONNET_MIN": 110,
+      "OUT_LOC_OFFNET_MIN": 110,
+      "OUT_LOC_OFFNET_UNPAID_MIN": 110,
+      "OUT_LOC_OFFNET_PAID_MIN": 110,
+      "OUT_INTER_MIN": 110,
+      "OUT_LOC_LAND_MIN": 110,
+      "OUT_LOCAL_ONNET_SMS_AMT": 110,
+      "OUT_LOCAL_OFFNET_SMS_AMT": 110,
+      "OUT_LOCAL_LAND_PAID_SMS_AMT": 110,
+      "OUT_INTER_SMS_AMT": 110,
+      "DATA_VOLUME": 110,
+      "LTE_DATA_VOLUME": 110,
+      "TOTAL_ROAM_CALL_AMT": 110,
+      "TOTAL_ROAM_SMS_AMT": 110,
+      "TOTAL_ROAM_GPRS_MB": 110,
+      "COUNT_CONTACT": 470,
+      "AVG_TRANSACT_CONTACT": 470,
+      "SUM_TRANSACT_CONTACT": 470,
+      "AVG_DURATION_CONTACT": 470,
+      "COUNT_BASE_STATION": 162,
+      "arpu_segment": 5,
+      "data_segment": 110,
+      "call_segment": 0,
+      "predicted_arpu": 0
+    },
+    "duplicate_rows": 0,
+    "arpu": {
+      "ARPU_current": {
+        "nonnumeric": 0,
+        "zero": 1208,
+        "negative": 0,
+        "nonfinite": 28
+      },
+      "ARPU_3m_avg": {
+        "nonnumeric": 0,
+        "zero": 696,
+        "negative": 0,
+        "nonfinite": 5
+      },
+      "predicted_arpu": {
+        "nonnumeric": 0,
+        "zero": 103,
+        "negative": 0,
+        "nonfinite": 0
+      }
+    },
+    "unknown_tariffs": {
+      "current_tariff": []
+    },
+    "duplicate_ids": 0
+  },
+  "tariff_dictionary.csv": {
+    "rows": 21,
+    "columns": [
+      "Data_in_PKG",
+      "Min_another_operator_in_PKG",
+      "Min_another_operator_and_city_in_PKG",
+      "price_tariff",
+      "tariff_plan_code",
+      "description"
+    ],
+    "encoding": "utf-8-sig",
+    "separator": ",",
+    "dtypes": {
+      "Data_in_PKG": "int64",
+      "Min_another_operator_in_PKG": "int64",
+      "Min_another_operator_and_city_in_PKG": "int64",
+      "price_tariff": "float64",
+      "tariff_plan_code": "str",
+      "description": "str"
+    },
+    "missing": {
+      "Data_in_PKG": 0,
+      "Min_another_operator_in_PKG": 0,
+      "Min_another_operator_and_city_in_PKG": 0,
+      "price_tariff": 0,
+      "tariff_plan_code": 0,
+      "description": 0
+    },
+    "duplicate_rows": 0,
+    "arpu": {},
+    "unknown_tariffs": {
+      "tariff_plan_code": []
+    }
+  },
+  "feature_dictionary.csv": {
+    "rows": 38,
+    "columns": [
+      "feature",
+      "unit",
+      "description"
+    ],
+    "encoding": "utf-8-sig",
+    "separator": ",",
+    "dtypes": {
+      "feature": "str",
+      "unit": "str",
+      "description": "str"
+    },
+    "missing": {
+      "feature": 0,
+      "unit": 0,
+      "description": 0
+    },
+    "duplicate_rows": 0,
+    "arpu": {},
+    "unknown_tariffs": {}
+  },
+  "data\\arpu_monthly.csv": {
+    "rows": 78798,
+    "columns": [
+      "ARPU_1M",
+      "TIME_KEY",
+      "ID_NUMBER"
+    ],
+    "encoding": "utf-8-sig",
+    "separator": ",",
+    "dtypes": {
+      "ARPU_1M": "float64",
+      "TIME_KEY": "str",
+      "ID_NUMBER": "int64"
+    },
+    "missing": {
+      "ARPU_1M": 0,
+      "TIME_KEY": 0,
+      "ID_NUMBER": 0
+    },
+    "duplicate_rows": 84,
+    "arpu": {
+      "ARPU_1M": {
+        "nonnumeric": 0,
+        "zero": 14721,
+        "negative": 4,
+        "nonfinite": 0
+      }
+    },
+    "unknown_tariffs": {},
+    "duplicate_ids": 63807
+  },
+  "data\\change_tariff.csv": {
+    "rows": 14823,
+    "columns": [
+      "TIME_KEY",
+      "AVG_ARPU_PREV_3M",
+      "AVG_ARPU_NEXT_3M",
+      "ID_NUMBER",
+      "tariff_plan_code_from",
+      "tariff_plan_code_to"
+    ],
+    "encoding": "utf-8-sig",
+    "separator": ",",
+    "dtypes": {
+      "TIME_KEY": "str",
+      "AVG_ARPU_PREV_3M": "float64",
+      "AVG_ARPU_NEXT_3M": "float64",
+      "ID_NUMBER": "int64",
+      "tariff_plan_code_from": "str",
+      "tariff_plan_code_to": "str"
+    },
+    "missing": {
+      "TIME_KEY": 0,
+      "AVG_ARPU_PREV_3M": 0,
+      "AVG_ARPU_NEXT_3M": 0,
+      "ID_NUMBER": 0,
+      "tariff_plan_code_from": 0,
+      "tariff_plan_code_to": 0
+    },
+    "duplicate_rows": 6,
+    "arpu": {
+      "AVG_ARPU_PREV_3M": {
+        "nonnumeric": 0,
+        "zero": 1406,
+        "negative": 1,
+        "nonfinite": 0
+      },
+      "AVG_ARPU_NEXT_3M": {
+        "nonnumeric": 0,
+        "zero": 1609,
+        "negative": 0,
+        "nonfinite": 0
+      }
+    },
+    "unknown_tariffs": {
+      "tariff_plan_code_from": [],
+      "tariff_plan_code_to": []
+    },
+    "duplicate_ids": 6
+  },
+  "data\\dict_tariff.csv": {
+    "rows": 21,
+    "columns": [
+      "Data_in_PKG",
+      "Min_another_operator_in_PKG",
+      "Min_another_operator_and_city_in_PKG",
+      "price_tariff",
+      "tariff_plan_code"
+    ],
+    "encoding": "utf-8-sig",
+    "separator": ",",
+    "dtypes": {
+      "Data_in_PKG": "int64",
+      "Min_another_operator_in_PKG": "int64",
+      "Min_another_operator_and_city_in_PKG": "int64",
+      "price_tariff": "float64",
+      "tariff_plan_code": "str"
+    },
+    "missing": {
+      "Data_in_PKG": 0,
+      "Min_another_operator_in_PKG": 0,
+      "Min_another_operator_and_city_in_PKG": 0,
+      "price_tariff": 0,
+      "tariff_plan_code": 0
+    },
+    "duplicate_rows": 0,
+    "arpu": {},
+    "unknown_tariffs": {
+      "tariff_plan_code": []
+    }
+  },
+  "data\\traffic.csv": {
+    "rows": 75736,
+    "columns": [
+      "DEVICE_ID",
+      "time_key",
+      "OUT_LOC_ONNET_MIN",
+      "OUT_LOC_OFFNET_MIN",
+      "OUT_LOC_OFFNET_UNPAID_MIN",
+      "OUT_LOC_OFFNET_PAID_MIN",
+      "OUT_INTER_MIN",
+      "OUT_LOC_LAND_MIN",
+      "OUT_LOCAL_ONNET_SMS_AMT",
+      "OUT_LOCAL_OFFNET_SMS_AMT",
+      "OUT_LOCAL_LAND_PAID_SMS_AMT",
+      "OUT_INTER_SMS_AMT",
+      "DATA_VOLUME",
+      "LTE_DATA_VOLUME",
+      "TOTAL_ROAM_CALL_AMT",
+      "TOTAL_ROAM_SMS_AMT",
+      "TOTAL_ROAM_GPRS_MB",
+      "COUNT_CONTACT",
+      "AVG_TRANSACT_CONTACT",
+      "SUM_TRANSACT_CONTACT",
+      "AVG_DURATION_CONTACT",
+      "COUNT_BASE_STATION",
+      "FIRST_DISP_DIAG",
+      "OS_1",
+      "OS_2",
+      "OS_3",
+      "OS_4",
+      "date_issue_device",
+      "ID_NUMBER",
+      "tariff_plan_code"
+    ],
+    "encoding": "utf-8-sig",
+    "separator": ",",
+    "dtypes": {
+      "DEVICE_ID": "float64",
+      "time_key": "str",
+      "OUT_LOC_ONNET_MIN": "float64",
+      "OUT_LOC_OFFNET_MIN": "float64",
+      "OUT_LOC_OFFNET_UNPAID_MIN": "float64",
+      "OUT_LOC_OFFNET_PAID_MIN": "float64",
+      "OUT_INTER_MIN": "float64",
+      "OUT_LOC_LAND_MIN": "float64",
+      "OUT_LOCAL_ONNET_SMS_AMT": "float64",
+      "OUT_LOCAL_OFFNET_SMS_AMT": "float64",
+      "OUT_LOCAL_LAND_PAID_SMS_AMT": "float64",
+      "OUT_INTER_SMS_AMT": "float64",
+      "DATA_VOLUME": "float64",
+      "LTE_DATA_VOLUME": "float64",
+      "TOTAL_ROAM_CALL_AMT": "float64",
+      "TOTAL_ROAM_SMS_AMT": "float64",
+      "TOTAL_ROAM_GPRS_MB": "float64",
+      "COUNT_CONTACT": "float64",
+      "AVG_TRANSACT_CONTACT": "float64",
+      "SUM_TRANSACT_CONTACT": "float64",
+      "AVG_DURATION_CONTACT": "float64",
+      "COUNT_BASE_STATION": "float64",
+      "FIRST_DISP_DIAG": "float64",
+      "OS_1": "float64",
+      "OS_2": "float64",
+      "OS_3": "float64",
+      "OS_4": "float64",
+      "date_issue_device": "str",
+      "ID_NUMBER": "int64",
+      "tariff_plan_code": "str"
+    },
+    "missing": {
+      "DEVICE_ID": 2697,
+      "time_key": 0,
+      "OUT_LOC_ONNET_MIN": 0,
+      "OUT_LOC_OFFNET_MIN": 0,
+      "OUT_LOC_OFFNET_UNPAID_MIN": 0,
+      "OUT_LOC_OFFNET_PAID_MIN": 0,
+      "OUT_INTER_MIN": 0,
+      "OUT_LOC_LAND_MIN": 0,
+      "OUT_LOCAL_ONNET_SMS_AMT": 0,
+      "OUT_LOCAL_OFFNET_SMS_AMT": 0,
+      "OUT_LOCAL_LAND_PAID_SMS_AMT": 0,
+      "OUT_INTER_SMS_AMT": 0,
+      "DATA_VOLUME": 0,
+      "LTE_DATA_VOLUME": 0,
+      "TOTAL_ROAM_CALL_AMT": 0,
+      "TOTAL_ROAM_SMS_AMT": 0,
+      "TOTAL_ROAM_GPRS_MB": 0,
+      "COUNT_CONTACT": 3987,
+      "AVG_TRANSACT_CONTACT": 3987,
+      "SUM_TRANSACT_CONTACT": 3987,
+      "AVG_DURATION_CONTACT": 3987,
+      "COUNT_BASE_STATION": 2251,
+      "FIRST_DISP_DIAG": 6302,
+      "OS_1": 6027,
+      "OS_2": 6027,
+      "OS_3": 6027,
+      "OS_4": 6027,
+      "date_issue_device": 0,
+      "ID_NUMBER": 0,
+      "tariff_plan_code": 16725
+    },
+    "duplicate_rows": 0,
+    "arpu": {},
+    "unknown_tariffs": {
+      "tariff_plan_code": []
+    },
+    "duplicate_ids": 60861
+  }
+}

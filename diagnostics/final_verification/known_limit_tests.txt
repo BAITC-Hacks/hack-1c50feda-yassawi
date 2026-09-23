@@ -1,0 +1,6 @@
+test_restored_main_stops_after_six_negative_pilots (tests.test_exploration.MainKnownLimitTests.test_restored_main_stops_after_six_negative_pilots) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.118s
+
+OK

@@ -1,0 +1,99 @@
+{
+  "organizer_files_unchanged": [
+    "customer_profile.csv",
+    "feature_dictionary.csv",
+    "tariff_dictionary.csv",
+    "data\\arpu_monthly.csv",
+    "data\\change_tariff.csv",
+    "data\\dict_tariff.csv",
+    "data\\traffic.csv",
+    "agent_template.py",
+    "environment.py",
+    "mock_environment.py",
+    "scoring_core.py",
+    "local_eval.py",
+    "make_submission.py",
+    "PARTICIPANT_GUIDE.md",
+    "PARTICIPANT_GUIDE.pdf"
+  ],
+  "submission_reproduced": true,
+  "runs": [
+    {
+      "seed": 0,
+      "final_campaigns": 1,
+      "pilots": 16,
+      "total_contacts": 3578,
+      "total_cost": 6318
+    },
+    {
+      "seed": 1,
+      "final_campaigns": 1,
+      "pilots": 16,
+      "total_contacts": 3578,
+      "total_cost": 1372
+    },
+    {
+      "seed": 2,
+      "final_campaigns": 2,
+      "pilots": 16,
+      "total_contacts": 5168,
+      "total_cost": 1372
+    },
+    {
+      "seed": 3,
+      "final_campaigns": 1,
+      "pilots": 16,
+      "total_contacts": 1860,
+      "total_cost": 6326
+    },
+    {
+      "seed": 4,
+      "final_campaigns": 1,
+      "pilots": 15,
+      "total_contacts": 4665,
+      "total_cost": 972
+    },
+    {
+      "seed": 5,
+      "final_campaigns": 1,
+      "pilots": 16,
+      "total_contacts": 3923,
+      "total_cost": 3172
+    },
+    {
+      "seed": 6,
+      "final_campaigns": 2,
+      "pilots": 16,
+      "total_contacts": 5168,
+      "total_cost": 1372
+    },
+    {
+      "seed": 7,
+      "final_campaigns": 1,
+      "pilots": 16,
+      "total_contacts": 1860,
+      "total_cost": 1380
+    },
+    {
+      "seed": 8,
+      "final_campaigns": 2,
+      "pilots": 16,
+      "total_contacts": 4498,
+      "total_cost": 8918
+    },
+    {
+      "seed": 9,
+      "final_campaigns": 3,
+      "pilots": 16,
+      "total_contacts": 10282,
+      "total_cost": 1772
+    },
+    {
+      "seed": 42,
+      "final_campaigns": 1,
+      "pilots": 16,
+      "total_contacts": 4722,
+      "total_cost": 8918
+    }
+  ]
+}

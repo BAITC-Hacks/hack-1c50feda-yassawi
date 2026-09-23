@@ -3,9 +3,18 @@ qamqornet.db
 __pycache__/
 .venv/
 *.pyc
+*.pyo
 .env
 .env.*
 !.env.example
 .streamlit/secrets.toml
 *.tmp
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.pem
+*.key
+
+# Optional local exports; keep the checked-in diagnostics and archives.
+/exports/
+/diagnostics/local_runs/

@@ -1,0 +1,7 @@
+﻿{
+    "main_sha256":  "76DEFFC4D074B85F0453977E422DD64B7AB6257FEBB1F40F0F0F714734DEF1CC",
+    "history_sha256":  "C52D7DAD11FCCC7425AFE6D36A44A1FA03C8CC148BE2039CE264D0C5C100F230",
+    "experiment_sha256":  "43B88055A4F71AF19B39FF49694B124B11873CD812FF9A0B9388E57867279658",
+    "experiment_source":  "experiments/stage1_expanded_search/agent.py",
+    "main_source":  "snapshots/before_stage1/agent.py"
+}

@@ -1,18 +1,28 @@
 """Optional Russian demo; the submission agent has no Streamlit dependency."""
 import contextlib
+import hashlib
 import io
 import json
 from pathlib import Path
 import subprocess
 import sys
+import types
 
 import pandas as pd
 import streamlit as st
 
-from agent import Agent
 from local_eval import evaluate_agent
 
-ROOT = Path(__file__).parent
+ROOT = Path(__file__).resolve().parent
+AGENT_PATH = ROOT / "agent.py"
+AGENT_SOURCE = AGENT_PATH.read_bytes()
+AGENT_SHA256 = hashlib.sha256(AGENT_SOURCE).hexdigest()
+# Streamlit keeps imported modules across reruns. Execute the current root source
+# directly so a running demo cannot retain an older experimental Agent class.
+agent_module = types.ModuleType("_beegrowth_demo_agent")
+agent_module.__file__ = str(AGENT_PATH)
+exec(compile(AGENT_SOURCE, str(AGENT_PATH), "exec"), agent_module.__dict__)
+Agent = agent_module.Agent
 
 
 class DemoAgent(Agent):
@@ -31,7 +41,16 @@ def run_demo(seed):
         result = evaluate_agent(agent, seed=int(seed), verbose=False)
     if not result or "Агент упал" in output.getvalue() or "отброшена" in output.getvalue():
         raise RuntimeError(output.getvalue() or "Оценка не получена")
-    return {**agent.snapshot, "evaluation": result, "seed": int(seed)}
+    return {**agent.snapshot, "evaluation": result, "seed": int(seed),
+            "agent_path": str(AGENT_PATH), "agent_sha256": AGENT_SHA256}
+
+
+# Reports without provenance predate this guard and must also be discarded.
+if st.session_state.get("report", {}).get("agent_sha256") != AGENT_SHA256:
+    st.session_state.pop("report", None)
+if st.session_state.get("submission_agent_sha256") != AGENT_SHA256:
+    st.session_state.pop("submission", None)
+    st.session_state.pop("submission_agent_sha256", None)
 
 
 st.set_page_config(page_title="BeeGrowth Agent", page_icon="🐝", layout="wide")
@@ -91,6 +110,7 @@ if st.button("Создать официальный submission.csv"):
         process = subprocess.run([sys.executable, "make_submission.py"], cwd=ROOT, capture_output=True,
                                  timeout=600, check=True)
         st.session_state["submission"] = (ROOT / "submission.csv").read_bytes()
+        st.session_state["submission_agent_sha256"] = AGENT_SHA256
     except (OSError, subprocess.SubprocessError) as exc:
         st.error(f"Не удалось создать submission: {exc}")
 if "submission" in st.session_state:

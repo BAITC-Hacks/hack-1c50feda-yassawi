@@ -1,0 +1,62 @@
+﻿[
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\customer_profile.csv",
+        "Hash":  "A85E9BADF4CB51B1BA8C43A868498B6FA8075509F3CD8E19EF72E1C25A6DC815"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\feature_dictionary.csv",
+        "Hash":  "80BB9DDDEA7A054C3EF6569805013EFBE313C7918A9D72D06203D1534E8F5C21"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\tariff_dictionary.csv",
+        "Hash":  "D3E6588F5D8E8E51202B4A77B2D4C0243080965A82D8E1D9411149220DD9DF1C"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\data\\arpu_monthly.csv",
+        "Hash":  "83D96B61C38A8BF7CDF5F07BC4F17F7F2F39885559C496FC28C266CEF8AD3C4A"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\data\\change_tariff.csv",
+        "Hash":  "C52D7DAD11FCCC7425AFE6D36A44A1FA03C8CC148BE2039CE264D0C5C100F230"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\data\\dict_tariff.csv",
+        "Hash":  "A34D81DACFFBB937DDD542E87D421AFCEA4842379ACFBAD55B8D59BDF710F4BE"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\data\\traffic.csv",
+        "Hash":  "CB0A3F8827D8BE6989B65DC5BF0B7C901047CF64E485F4EE74E3C24787EE846C"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\agent_template.py",
+        "Hash":  "4EB369B732D4756BB7861C0DCCAB8AF09D5FE17CDE0FA629981D3EEA5B5EB10D"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\environment.py",
+        "Hash":  "8003A305EA9A560270EE875B2C48A6B1FBF8198D9C6C680E4827542532BB3DD1"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\mock_environment.py",
+        "Hash":  "E1E4A480126D2896E89A868194B3ED7F7EE48D7C5FC2C8A2491970D8E231F506"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\scoring_core.py",
+        "Hash":  "BA68595DAEBB12418000FA4D59FFBBF156DF045F589BDBB789F3531145C58327"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\local_eval.py",
+        "Hash":  "16C3B96B00487C02EE470A23E6B4554C220A5EA817B1EA46B75CFAC158DD5B47"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\make_submission.py",
+        "Hash":  "25C82A71640814DE613261A2684824DB66C53C7F948AF5AA8BA333AE263A9622"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\PARTICIPANT_GUIDE.md",
+        "Hash":  "996B12258F2FBA2B144A1ECA8FB8B10AC34D23DC4C9218193E330DBF8B9306AB"
+    },
+    {
+        "Path":  "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\PARTICIPANT_GUIDE.pdf",
+        "Hash":  "B261A5DF8E2555BCE5F3AC1545A4DAF8A8E5A308C3609BF7C04E7904B4D37E4A"
+    }
+]

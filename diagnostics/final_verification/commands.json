@@ -1,0 +1,124 @@
+[
+  {
+    "name": "common_tests",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "unittest",
+      "tests.test_agent",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 5.5822616999503225,
+    "tests_run": 9,
+    "unittest_ok": true
+  },
+  {
+    "name": "demo_tests",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "unittest",
+      "tests.test_demo",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 15.016346499905922,
+    "tests_run": 4,
+    "unittest_ok": true
+  },
+  {
+    "name": "known_limit_tests",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "unittest",
+      "tests.test_exploration.MainKnownLimitTests",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 1.3374826000072062,
+    "tests_run": 1,
+    "unittest_ok": true
+  },
+  {
+    "name": "stage1_experiment_tests",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "unittest",
+      "tests.test_exploration.Stage1ExperimentalExplorationTests",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 2.1892137000104412,
+    "tests_run": 6,
+    "unittest_ok": true
+  },
+  {
+    "name": "diagnostic_tests",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "unittest",
+      "tests.test_split_eval",
+      "-v"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 3.4495052999118343,
+    "tests_run": 5,
+    "unittest_ok": true
+  },
+  {
+    "name": "local_eval",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "local_eval.py"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 2.775046999915503
+  },
+  {
+    "name": "local_eval_10",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "local_eval.py",
+      "--runs",
+      "10"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 19.410461199935526
+  },
+  {
+    "name": "make_submission_first",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "make_submission.py"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 2.573908200021833,
+    "submission_sha256": "e0531bbc31c53e86a3656dd0a1e7eb66c43cbddedd9312541478305a9446fa8e"
+  },
+  {
+    "name": "make_submission_second",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "make_submission.py"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 2.474763000034727,
+    "submission_sha256": "e0531bbc31c53e86a3656dd0a1e7eb66c43cbddedd9312541478305a9446fa8e",
+    "byte_equal_to_first": true
+  },
+  {
+    "name": "pip_check",
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "returncode": 0,
+    "elapsed_seconds": 1.1862300999928266
+  }
+]

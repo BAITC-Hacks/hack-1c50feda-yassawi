@@ -1,0 +1,102 @@
+{
+  "main_restored_byte_for_byte": true,
+  "versions": {
+    "main_sha256": "76DEFFC4D074B85F0453977E422DD64B7AB6257FEBB1F40F0F0F714734DEF1CC",
+    "history_sha256": "C52D7DAD11FCCC7425AFE6D36A44A1FA03C8CC148BE2039CE264D0C5C100F230",
+    "experiment_sha256": "43B88055A4F71AF19B39FF49694B124B11873CD812FF9A0B9388E57867279658",
+    "experiment_source": "experiments/stage1_expanded_search/agent.py",
+    "main_source": "snapshots/before_stage1/agent.py"
+  },
+  "archives": {
+    "before_stage1": {
+      "files_verified": 13,
+      "manifest_sha256": "3799d249de1fe14b5552647d4368ec98ce6100b56d66fd2370e6703ac306cf7d"
+    },
+    "stage1_experiment": {
+      "files_verified": 24,
+      "manifest_sha256": "a58e2afaa7255622d1928308e58fb692aa13899e9787f9e6141b9b1b02e9d627"
+    }
+  },
+  "histories": [
+    {
+      "version": "restored_main",
+      "agent_path": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\agent.py",
+      "agent_sha256": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc",
+      "history_path": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\data\\change_tariff.csv",
+      "history_relative_path": "data/change_tariff.csv",
+      "stage1_comparison_history_path": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\data\\change_tariff.csv",
+      "history_sha256": "c52d7dad11fccc7425afe6d36a44a1fa03c8cc148be2039ce264d0c5c100f230",
+      "raw_rows": 14823,
+      "rows_after_deduplication": 14817,
+      "processed_valid_rows": 13410,
+      "excluded_invalid_rows": 1407,
+      "grouped_observations": 13410,
+      "history_unavailable": false
+    },
+    {
+      "version": "before_stage1",
+      "agent_path": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\snapshots\\before_stage1\\agent.py",
+      "agent_sha256": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc",
+      "history_path": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\snapshots\\before_stage1\\data\\change_tariff.csv",
+      "history_relative_path": "snapshots/before_stage1/data/change_tariff.csv",
+      "stage1_comparison_history_path": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\snapshots\\before_stage1\\data\\change_tariff.csv",
+      "history_sha256": "c52d7dad11fccc7425afe6d36a44a1fa03c8cc148be2039ce264d0c5c100f230",
+      "raw_rows": 14823,
+      "rows_after_deduplication": 14817,
+      "processed_valid_rows": 13410,
+      "excluded_invalid_rows": 1407,
+      "grouped_observations": 13410,
+      "history_unavailable": false
+    },
+    {
+      "version": "stage1_experiment",
+      "agent_path": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\experiments\\stage1_expanded_search\\agent.py",
+      "agent_sha256": "43b88055a4f71af19b39ff49694b124b11873cd812ff9a0b9388e57867279658",
+      "history_path": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\experiments\\stage1_expanded_search\\data\\change_tariff.csv",
+      "history_relative_path": "experiments/stage1_expanded_search/data/change_tariff.csv",
+      "stage1_comparison_history_path": "C:\\Users\\aktor\\Desktop\\hack-alem\\hack-1c50feda-yassawi\\data\\change_tariff.csv",
+      "history_sha256": "c52d7dad11fccc7425afe6d36a44a1fa03c8cc148be2039ce264d0c5c100f230",
+      "raw_rows": 14823,
+      "rows_after_deduplication": 14817,
+      "processed_valid_rows": 13410,
+      "excluded_invalid_rows": 1407,
+      "grouped_observations": 13410,
+      "history_unavailable": false
+    }
+  ],
+  "previous_comparison_comparable": true,
+  "comparison_checks": {
+    "primary": {
+      "source_sha256": {
+        "before": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc",
+        "after": "43b88055a4f71af19b39ff49694b124b11873cd812ff9a0b9388e57867279658"
+      },
+      "result_sha256": "2eb4374ac4aee3af7a7d490a6643fa4965ba23fbf312707bb0994d9eb97180b1"
+    },
+    "additional": {
+      "source_sha256": {
+        "before": "76deffc4d074b85f0453977e422dd64b7ab6257febb1f40f0f0f714734def1cc",
+        "after": "43b88055a4f71af19b39ff49694b124b11873cd812ff9a0b9388e57867279658"
+      },
+      "result_sha256": "536f598fba300c2b85469023746e1e435d8b47e1b6c44887fb509caadf33becb"
+    }
+  },
+  "unchanged_organizer_files": [
+    "customer_profile.csv",
+    "feature_dictionary.csv",
+    "tariff_dictionary.csv",
+    "data/arpu_monthly.csv",
+    "data/change_tariff.csv",
+    "data/dict_tariff.csv",
+    "data/traffic.csv",
+    "agent_template.py",
+    "environment.py",
+    "mock_environment.py",
+    "scoring_core.py",
+    "local_eval.py",
+    "make_submission.py",
+    "PARTICIPANT_GUIDE.md",
+    "PARTICIPANT_GUIDE.pdf"
+  ],
+  "scope": "History loader only; no new experiments or optimization; historical comparisons retained."
+}

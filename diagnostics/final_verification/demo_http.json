@@ -1,0 +1,18 @@
+{
+  "address": "http://127.0.0.1:8501",
+  "responses": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 7260,
+      "health_text": null
+    },
+    {
+      "path": "/_stcore/health",
+      "status": 200,
+      "bytes": 2,
+      "health_text": "ok"
+    }
+  ],
+  "scope": "HTTP shell and health only, not a visual UI test"
+}
