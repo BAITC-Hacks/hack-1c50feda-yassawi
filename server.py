@@ -27,7 +27,7 @@ def connect_to_database():
 
 
 def initialize_database():
-    """Өтінімдер кестесін жасайды және бос кестеге үлгі дерек қосады."""
+    """Өтінімдер кестесін жасайды және aбос кестеге үлгі дерек қосады."""
     with connect_to_database() as connection:
         connection.execute(
             """
